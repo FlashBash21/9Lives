@@ -1,4 +1,4 @@
-extends Node2D
+extends Ability
 
 func execute(args: Dictionary):
 	var entity = args["entity"] as Entity

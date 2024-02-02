@@ -2,15 +2,19 @@ extends Entity
 
 const PRINT_ABILITY := preload("res://Scenes/Abilities/print_ability.tscn")
 const MOVE_ABILITY := preload("res://Scenes/Abilities/move_ability.tscn")
+const DASH_ABILITY := preload("res://Scenes/Abilities/dash_ability.tscn")
+
 
 var print_ability := PRINT_ABILITY.instantiate()
 var move_ability := MOVE_ABILITY.instantiate()
+var dash_ability := DASH_ABILITY.instantiate()
 
 func _ready() -> void:
 	#setup local vars
 	self.speed = 500
 
 	print_ability.execute({})
+	
 func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
