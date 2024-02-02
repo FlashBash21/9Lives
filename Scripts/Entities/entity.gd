@@ -8,6 +8,8 @@ var max_speed: float
 var acceleration: float
 var global_cooldown: float
 
+var abilities_list: Array
+
 func regen_health() -> void:
 	pass
 func regen_energy() -> void:
