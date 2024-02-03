@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm4x47g2pyrhx"]
+[gd_scene load_steps=3 format=3 uid="uid://bm4x47g2pyrhx"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_0.gd" id="1_eo57l"]
+[ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_syyrj"]
 
 [node name="Area 0" type="Node2D"]
 script = ExtResource("1_eo57l")
@@ -10,3 +11,7 @@ offset_left = 449.0
 offset_top = 220.0
 offset_right = 728.0
 offset_bottom = 361.0
+
+[node name="AreaDoor" parent="." instance=ExtResource("2_syyrj")]
+position = Vector2(51, 285)
+Area = 1

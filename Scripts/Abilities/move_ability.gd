@@ -7,3 +7,4 @@ func execute(args: Dictionary):
 	
 	var vel = direction * speed
 	entity.velocity = vel
+	entity.move_and_slide()

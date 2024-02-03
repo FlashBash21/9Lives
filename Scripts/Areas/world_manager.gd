@@ -12,13 +12,15 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("ui_accept")):
-		load_area(1)
+		#load_area(1)
+		pass
 	if (Input.is_action_just_pressed("ui_cancel")):
 		area_ref.ping()
 
 #automatically unloads current area and connects to its area query signal
 func load_area(area_num: int) -> void:
 	#load area and add it as a child
+	current_area = area_num
 	if (area_ref):
 		area_ref.clean_entites()
 		remove_child(area_ref)
@@ -27,4 +29,4 @@ func load_area(area_num: int) -> void:
 	add_child(area_ref)
 	area_ref.load_entity(player_ref)
 	#reconnect the signal
-	area_ref.connect("query_area_load", load_area)
+	area_ref.query_area_load.connect(load_area, CONNECT_DEFERRED)
