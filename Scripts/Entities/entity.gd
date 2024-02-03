@@ -21,6 +21,8 @@ func modify_energy(amount: int) -> void:
 	pass
 func modify_life(amount: int) -> void:
 	pass
+func apply_damage(ammount: int) -> void:
+	pass
 func load_ability(name:String) -> Ability:
 	var ability = load("res://Scenes/Abilities/%s_ability.tscn" % name)
 	var abilityNode = ability.instantiate() as Ability

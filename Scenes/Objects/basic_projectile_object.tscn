@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dowpmhjf72xpn"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tiwn3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbofn"]
+
+[node name="BasicProjectileObject" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(15, 15)
+texture = SubResource("PlaceholderTexture2D_tiwn3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wbofn")

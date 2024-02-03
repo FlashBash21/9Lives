@@ -3,6 +3,7 @@ extends Entity
 var print_ability := load_ability("print")
 var move_ability := load_ability("move")
 var dash_ability := load_ability("dash")
+var basic_projectile_ability := load_ability("basic_projectile")
 
 func _ready() -> void:
 	#setup local vars
@@ -25,3 +26,11 @@ func _physics_process(delta: float) -> void:
 	if (!dash_ability.is_dashing() and dir != Vector2.ZERO):
 		if (Input.is_action_just_pressed("dash")): dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
 	move_and_slide()
+	
+	#projectile ability
+	if(Input.is_action_just_pressed("shoot")): basic_projectile_ability.fire(({"entity" = self, "speed" = 1, "direction" = dir, 
+									"cooldown" = 5, "damage" = 5}))
+	
+func apply_damage(ammount: int) -> void:
+	hp -= ammount
+	print("hp: ", hp)	

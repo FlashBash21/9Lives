@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1ejg4p1mot"]
+
+[ext_resource type="Script" path="res://Scripts/Abilities/basic_projectile_ability.gd" id="1_xvi3u"]
+
+[node name="BasicProjectileAbility" type="Node2D"]
+script = ExtResource("1_xvi3u")
