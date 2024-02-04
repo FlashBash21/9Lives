@@ -1,4 +1,5 @@
 extends Node2D
+class_name WorldManager
 
 var current_area = 0
 var area_ref: BaseArea

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Entity
 
+
 var hp: int
 var energy: int
 var speed: float
@@ -10,6 +11,7 @@ var acceleration: float
 var global_cooldown: int
 var last_ability: int
 var abilities_list: Array
+
 
 func _process(delta:float) -> void:
 	last_ability += 1

@@ -7,11 +7,17 @@ var enemy_type: Entity #TODO: make enemy class and have enemy_type be type enemy
 var adjacent_areas: PackedInt32Array #small array bc we wont need large
 var size: Vector2
 
+func _ready() -> void:
+	add_to_group("Area")
+
 func ping():
 	print("pong!")
 
 func load_entity(entity: Entity) -> void:
 	add_child(entity)
+
+func load_projectile(proj: Projectile) -> void:
+	add_child(proj)
 
 func clean_entites() -> void:
 	for child in get_children():
