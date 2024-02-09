@@ -2,14 +2,6 @@ res://Scenes/Entites/player.tscn
 res://Scenes/Objects/basic_projectile_object.tscn
 res://Scenes/Abilities/basic_projectile_ability.tscn
 res://Scenes/Areas/world_manager.tscn
-res://Scripts/Abilities/basic_projectile_ability.gd
-res://Scripts/Entities/player.gd
-res://Scripts/Abilities/projectile_ability.tres.gd
-res://Scripts/Abilities/Ability.gd
-res://Scenes/Abilities/print_ability.tscn
-res://Scripts/Abilities/print_ability.gd
-res://Scripts/Entities/entity.gd
 res://Scenes/Areas/area_0.tscn
-res://Scripts/Areas/base_area.gd
-res://Scripts/Areas/world_manager.gd
-res://Scripts/Areas/area_0.gd
+res://Scripts/Entities/player.gd
+res://Scripts/Abilities/basic_projectile_ability.gd

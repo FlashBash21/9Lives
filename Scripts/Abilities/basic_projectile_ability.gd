@@ -8,7 +8,6 @@ var velocity: Vector2
 
 
 func execute(args: Dictionary) -> void:
-	print("BANG")
 	var entity = args["entity"] as Entity
 	var speed = args["speed"] as float
 	var direction = args["direction"] as Vector2

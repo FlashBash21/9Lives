@@ -28,7 +28,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	#projectile ability
-	if(Input.is_action_just_pressed("shoot")): basic_projectile_ability.execute(({"entity" = self, "speed" = 100, "direction" = dir, 
+	if(Input.is_action_just_pressed("shoot")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
 									"cooldown" = 5, "damage" = 5}))
 	
 func apply_damage(ammount: int) -> void:
