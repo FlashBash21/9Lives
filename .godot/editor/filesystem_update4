@@ -1,7 +1,10 @@
 res://Scenes/Entites/player.tscn
-res://Scenes/Objects/basic_projectile_object.tscn
-res://Scenes/Abilities/basic_projectile_ability.tscn
+res://Scenes/Abilities/print_ability.tscn
+res://Scenes/Abilities/move_ability.tscn
 res://Scenes/Areas/world_manager.tscn
 res://Scenes/Areas/area_0.tscn
-res://Scripts/Entities/player.gd
-res://Scripts/Abilities/basic_projectile_ability.gd
+res://Scenes/Areas/area_1.tscn
+res://Scenes/Abilities/dash_ability.tscn
+res://Scenes/Areas/Area Objects/area_door.tscn
+res://Scripts/Areas/Area Objects/area_door.gd
+res://Scripts/Areas/base_area.gd

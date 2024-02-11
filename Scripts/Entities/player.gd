@@ -1,4 +1,5 @@
 extends Entity
+class_name Player
 
 var print_ability := load_ability("print")
 var move_ability := load_ability("move")
@@ -7,7 +8,7 @@ var basic_projectile_ability := load_ability("basic_projectile")
 
 func _ready() -> void:
 	#setup local vars
-	self.speed = 500
+	self.speed = 300
 
 	print_ability.execute({})
 	
@@ -25,8 +26,7 @@ func _physics_process(delta: float) -> void:
 	#dash if we are not dashing and moving
 	if (!dash_ability.is_dashing() and dir != Vector2.ZERO):
 		if (Input.is_action_just_pressed("dash")): dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
-	move_and_slide()
-	
+			
 	#projectile ability
 	if(Input.is_action_just_pressed("shoot")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
 									"cooldown" = 5, "damage" = 5}))
