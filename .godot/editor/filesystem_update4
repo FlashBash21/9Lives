@@ -5,11 +5,6 @@ res://Scenes/Areas/world_manager.tscn
 res://Scenes/Areas/area_0.tscn
 res://Scenes/Areas/area_1.tscn
 res://Scenes/Abilities/dash_ability.tscn
-res://Scripts/Areas/area_0.gd
-res://Scenes/Areas/AreaMover.gd
-res://Scripts/Entities/player.gd
-res://Scripts/Areas/world_manager.gd
-res://Scripts/Areas/base_area.gd
 res://Scenes/Areas/Area Objects/area_door.tscn
-res://Scenes/Areas/Area Objects/area_door.gd
 res://Scripts/Areas/Area Objects/area_door.gd
+res://Scripts/Areas/base_area.gd

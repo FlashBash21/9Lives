@@ -1,34 +1,34 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707003128
+::res://::1707635511
 icon.svg::CompressedTexture2D::243468517192347284::1706855791::1706855791::1::::<><>::
 ::res://Resources/::1706859364
-::res://Scenes/::1706856147
-::res://Scenes/Abilities/::1706957675
-dash_ability.tscn::PackedScene::8068260279664205567::1706957675::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
-move_ability.tscn::PackedScene::3988790515073486677::1706957675::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
-print_ability.tscn::PackedScene::2893082318069768461::1706957675::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
-::res://Scenes/Areas/::1706957675
-AreaMover.gd::GDScript::-1::1706953564::0::1::::<>Area2D<>::
-area_0.tscn::PackedScene::3290003732337889625::1706957675::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn
-area_1.tscn::PackedScene::2755502406907540447::1706957675::0::1::::<><>::res://Scripts/Areas/area_1.gd
-world_manager.tscn::PackedScene::7332831277350975130::1706957675::0::1::::<><>::res://Scripts/Areas/world_manager.gd
-::res://Scenes/Areas/Area Objects/::1706957675
-area_door.tscn::PackedScene::3780403116402693299::1706957675::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd
-::res://Scenes/Entites/::1706957675
-player.tscn::PackedScene::3383834446001041586::1706957675::0::1::::<><>::res://Scripts/Entities/player.gd
+::res://Scenes/::1707511986
+::res://Scenes/Abilities/::1707511987
+dash_ability.tscn::PackedScene::8068260279664205567::1707511987::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
+move_ability.tscn::PackedScene::3988790515073486677::1707003187::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
+print_ability.tscn::PackedScene::2893082318069768461::1707005451::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
+::res://Scenes/Areas/::1707511987
+AreaMover.gd::GDScript::-1::1707511987::0::1::::<>Area2D<>::
+area_0.tscn::PackedScene::3290003732337889625::1707511987::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn
+area_1.tscn::PackedScene::2755502406907540447::1707003187::0::1::::<><>::res://Scripts/Areas/area_1.gd
+world_manager.tscn::PackedScene::7332831277350975130::1707511739::0::1::::<><>::res://Scripts/Areas/world_manager.gd
+::res://Scenes/Areas/Area Objects/::1707511987
+area_door.tscn::PackedScene::3780403116402693299::1707511987::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd
+::res://Scenes/Entites/::1707511987
+player.tscn::PackedScene::3383834446001041586::1707511987::0::1::::<><>::res://Scripts/Entities/player.gd
 ::res://Scripts/::1706856169
-::res://Scripts/Abilities/::1706916532
-Ability.gd::GDScript::-1::1706916522::0::1::::Ability<>Node2D<>::
-dash_ability.gd::GDScript::-1::1706916532::0::1::::<>Ability<>::
-move_ability.gd::GDScript::-1::1706913834::0::1::::<>Ability<>::
-print_ability.gd::GDScript::-1::1706916332::0::1::::<>Ability<>::
-::res://Scripts/Areas/::1706957175
-area_0.gd::GDScript::-1::1706957175::0::1::::<>BaseArea<>::
+::res://Scripts/Abilities/::1707511987
+Ability.gd::GDScript::-1::1707511987::0::1::::Ability<>Node2D<>::
+dash_ability.gd::GDScript::-1::1707511987::0::1::::<>Ability<>::
+move_ability.gd::GDScript::-1::1707511987::0::1::::<>Ability<>::
+print_ability.gd::GDScript::-1::1707511942::0::1::::<>Ability<>::
+::res://Scripts/Areas/::1707511987
+area_0.gd::GDScript::-1::1707511987::0::1::::<>BaseArea<>::
 area_1.gd::GDScript::-1::1706858412::0::1::::<>BaseArea<>::
-base_area.gd::GDScript::-1::1706957127::0::1::::BaseArea<>Node2D<>::
-world_manager.gd::GDScript::-1::1706955540::0::1::::<>Node2D<>::
-::res://Scripts/Areas/Area Objects/::1706957581
-area_door.gd::GDScript::-1::1706957581::0::1::::AreaDoor<>Area2D<>::
-::res://Scripts/Entities/::1706953564
-entity.gd::GDScript::-1::1706913187::0::1::::Entity<>CharacterBody2D<>::
-player.gd::GDScript::-1::1706953564::0::1::::Player<>Entity<>::
+base_area.gd::GDScript::-1::1707511987::0::1::::BaseArea<>Node2D<>::
+world_manager.gd::GDScript::-1::1707511987::0::1::::<>Node2D<>::
+::res://Scripts/Areas/Area Objects/::1707511987
+area_door.gd::GDScript::-1::1707511987::0::1::::AreaDoor<>Area2D<>::
+::res://Scripts/Entities/::1707511987
+entity.gd::GDScript::-1::1707511987::0::1::::Entity<>CharacterBody2D<>::
+player.gd::GDScript::-1::1707511987::0::1::::Player<>Entity<>::
