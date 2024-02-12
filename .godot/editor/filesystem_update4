@@ -3,3 +3,5 @@ res://Scenes/Objects/basic_projectile_object.tscn
 res://Scenes/Abilities/basic_projectile_ability.tscn
 res://Scenes/Areas/world_manager.tscn
 res://Scenes/Areas/area_0.tscn
+res://Scripts/Entities/player.gd
+res://Scripts/Abilities/projectile_ability.tres.gd

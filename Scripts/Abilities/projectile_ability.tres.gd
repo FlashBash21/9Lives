@@ -12,7 +12,7 @@ var last_shot = 0
 
 	
 func _physics_process(delta):
-	last_shot += 1
+	last_shot += delta
 	for i in projectiles:
 		var p = i["projectile"]
 		var vel = i["velocity"]

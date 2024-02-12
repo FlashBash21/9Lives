@@ -28,8 +28,8 @@ func _physics_process(delta: float) -> void:
 		if (Input.is_action_just_pressed("dash")): dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
 			
 	#projectile ability
-	if(Input.is_action_just_pressed("shoot")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
-									"cooldown" = 5, "damage" = 5}))
+	if(Input.is_action_pressed("shoot")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
+									"cooldown" = 1, "damage" = 5}))
 	
 func apply_damage(ammount: int) -> void:
 	hp -= ammount
