@@ -32,5 +32,5 @@ func _physics_process(delta: float) -> void:
 									"cooldown" = 1, "damage" = 5}))
 	
 func apply_damage(ammount: int) -> void:
-	hp -= ammount
+	hp = hp -  ammount
 	print("hp: ", hp)	

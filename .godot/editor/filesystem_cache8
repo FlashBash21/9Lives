@@ -1,38 +1,43 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1707778739
-icon.svg::CompressedTexture2D::243468517192347284::1706836059::1706836070::1::::<><>::
-::res://Scenes/::1707772493
-::res://Scenes/Abilities/::1707772493
-basic_projectile_ability.tscn::PackedScene::5715023813353599::1707772493::0::1::::<><>::res://Scripts/Abilities/basic_projectile_ability.gd
-dash_ability.tscn::PackedScene::8068260279664205567::1707772454::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
-move_ability.tscn::PackedScene::3988790515073486677::1706899088::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
-print_ability.tscn::PackedScene::2893082318069768461::1706899087::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
-::res://Scenes/Areas/::1707772454
-AreaMover.gd::GDScript::-1::1707772454::0::1::::<>Area2D<>::
-area_0.tscn::PackedScene::3290003732337889625::1707772454::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn
-area_1.tscn::PackedScene::2755502406907540447::1706896589::0::1::::<><>::res://Scripts/Areas/area_1.gd
-world_manager.tscn::PackedScene::7332831277350975130::1706896589::0::1::::<><>::res://Scripts/Areas/world_manager.gd
-::res://Scenes/Areas/Area Objects/::1707772454
-area_door.tscn::PackedScene::3780403116402693299::1707772454::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd
-::res://Scenes/Entites/::1707772493
-player.tscn::PackedScene::3383834446001041586::1707772493::0::1::::<><>::res://Scripts/Entities/player.gd
-::res://Scenes/Objects/::1707772493
-basic_projectile_object.tscn::PackedScene::8188254738857146271::1707772493::0::1::::<><>::
-::res://Scripts/::1706896589
-::res://Scripts/Abilities/::1707772493
-Ability.gd::GDScript::-1::1707772454::0::1::::Ability<>Node2D<>::
-basic_projectile_ability.gd::GDScript::-1::1707772493::0::1::::<>Projectile<>::
-dash_ability.gd::GDScript::-1::1707772454::0::1::::<>Ability<>::
-move_ability.gd::GDScript::-1::1707772454::0::1::::<>Ability<>::
-print_ability.gd::GDScript::-1::1707772454::0::1::::<>Ability<>::
-projectile_ability.tres.gd::GDScript::-1::1707772493::0::1::::Projectile<>Ability<>::
-::res://Scripts/Areas/::1707772493
-area_0.gd::GDScript::-1::1707772493::0::1::::<>BaseArea<>::
-area_1.gd::GDScript::-1::1706896589::0::1::::<>BaseArea<>::
-base_area.gd::GDScript::-1::1707772493::0::1::::BaseArea<>Node2D<>::
-world_manager.gd::GDScript::-1::1707772493::0::1::::WorldManager<>Node2D<>::
-::res://Scripts/Areas/Area Objects/::1707772454
-area_door.gd::GDScript::-1::1707772454::0::1::::AreaDoor<>Area2D<>::
-::res://Scripts/Entities/::1707772493
-entity.gd::GDScript::-1::1707772493::0::1::::Entity<>CharacterBody2D<>::
-player.gd::GDScript::-1::1707772493::0::1::::Player<>Entity<>::
+::res://::1710461620
+icon.svg::CompressedTexture2D::243468517192347284::1707658895::1707658895::1::::<><>::
+::res://Scenes/::1709039975
+::res://Scenes/Abilities/::1709039977
+basic_projectile_ability.tscn::PackedScene::5715023813353599::1709002394::0::1::::<><>::res://Scripts/Abilities/basic_projectile_ability.gd
+dash_ability.tscn::PackedScene::8068260279664205567::1709002394::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
+move_ability.tscn::PackedScene::3988790515073486677::1709002394::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
+print_ability.tscn::PackedScene::2893082318069768461::1709002394::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
+punch_ability.tscn::PackedScene::744038827610002260::1709002394::0::1::::<><>::res://Scripts/Abilities/punch_ability.gd
+::res://Scenes/Areas/::1709002394
+AreaMover.gd::GDScript::-1::1707658915::0::1::::<>Area2D<>::
+area_0.tscn::PackedScene::3290003732337889625::1707658915::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn
+area_1.tscn::PackedScene::2755502406907540447::1709002394::0::1::::<><>::res://Scripts/Areas/area_1.gd
+world_manager.tscn::PackedScene::7332831277350975130::1709002394::0::1::::<><>::res://Scripts/Areas/world_manager.gd
+::res://Scenes/Areas/Area Objects/::1707790799
+area_door.tscn::PackedScene::3780403116402693299::1707790799::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd
+::res://Scenes/Entites/::1709039977
+player.tscn::PackedScene::3383834446001041586::1709002394::0::1::::<><>::res://Scripts/Entities/player.gd
+test_enemy.tscn::PackedScene::6134245679762608471::1709002394::0::1::::<><>::res://Scripts/Entities/test_enemy.gd
+::res://Scenes/Objects/::1708997915
+basic_projectile_object.tscn::PackedScene::8188254738857146271::1708997915::0::1::::<><>::
+::res://Scripts/::1709039975
+::res://Scripts/Abilities/::1709039977
+Ability.gd::GDScript::-1::1707658915::0::1::::Ability<>Node2D<>::
+basic_projectile_ability.gd::GDScript::-1::1708998646::0::1::::<>Projectile<>::
+dash_ability.gd::GDScript::-1::1707658915::0::1::::<>Ability<>::
+move_ability.gd::GDScript::-1::1707658915::0::1::::<>Ability<>::
+print_ability.gd::GDScript::-1::1707658895::0::1::::<>Ability<>::
+projectile_ability.tres.gd::GDScript::-1::1708999414::0::1::::Projectile<>Ability<>::
+punch_ability.gd::GDScript::-1::1709002394::0::1::::<>Ability<>::
+::res://Scripts/Areas/::1709039977
+area_0.gd::GDScript::-1::1707658915::0::1::::<>BaseArea<>::
+area_1.gd::GDScript::-1::1708998057::0::1::::<>BaseArea<>::
+base_area.gd::GDScript::-1::1707658915::0::1::::BaseArea<>Node2D<>::
+world_manager.gd::GDScript::-1::1707658915::0::1::::WorldManager<>Node2D<>::
+::res://Scripts/Areas/Area Objects/::1707658932
+area_door.gd::GDScript::-1::1707658915::0::1::::AreaDoor<>Area2D<>::
+::res://Scripts/Entities/::1709039977
+enemies.tscn::PackedScene::4875209753166722958::1709002394::0::1::::<><>::
+entity.gd::GDScript::-1::1707658895::0::1::::Entity<>CharacterBody2D<>::
+player.gd::GDScript::-1::1708999861::0::1::::Player<>Entity<>::
+test_enemy.gd::GDScript::-1::1709002221::0::1::::Enemy<>Entity<>::

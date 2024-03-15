@@ -10,12 +10,13 @@ var damage: int
 
 var last_shot = 0
 
-	
+
 func _physics_process(delta):
 	last_shot += delta
 	for i in projectiles:
 		var p = i["projectile"]
 		var vel = i["velocity"]
+		var damage = i["damage"]
 		
 		if i["ticks"] >= 100:
 			p.queue_free()
@@ -26,9 +27,12 @@ func _physics_process(delta):
 		
 		if collision:
 			var collider = collision.get_collider()
-			if(collider.get_class() == "Entity"):
-				collider.apply_damage(damage)
-				print("ow")
+			collider.apply_damage(damage)
+
+		#	if(collider.get_class() == "Entity"):
+		#		collider.apply_damage(damage)
+		#		print("ow")
+
 			p.queue_free()
 			projectiles.erase(i)
 		i["ticks"] += 1
