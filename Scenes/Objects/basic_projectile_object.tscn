@@ -7,7 +7,7 @@
 [node name="BasicProjectileObject" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(15, 15)
+scale = Vector2(20, 20)
 texture = SubResource("PlaceholderTexture2D_tiwn3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
