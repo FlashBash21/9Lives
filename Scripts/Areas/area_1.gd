@@ -9,4 +9,4 @@ func _ready() -> void:
 	add_child(enemy_ref)
 	enemy_ref.position.x = 100
 	enemy_ref.position.y = 100
-	
+	super()
