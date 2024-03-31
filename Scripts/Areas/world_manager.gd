@@ -9,7 +9,6 @@ func _ready() -> void:
 	var player = load("res://Scenes/Entites/player.tscn")
 	player_ref = player.instantiate()
 	load_area(0)
-	area_ref.ping()
 
 func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("ui_accept")):

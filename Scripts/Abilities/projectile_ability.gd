@@ -7,7 +7,7 @@ var entity: Entity
 var speed: float
 var direction: Vector2
 var damage: int
-var duration := 100.0
+var duration := 1
 
 
 var last_shot = INF
@@ -23,7 +23,7 @@ func _physics_process(delta):
 		var vel = i["velocity"]
 		var damage = i["damage"]
 		
-		if i["ticks"] >= duration:
+		if i["time"] >= duration:
 			p.queue_free()
 			projectiles.erase(i)
 			pass
@@ -37,4 +37,4 @@ func _physics_process(delta):
 						p.queue_free()
 						projectiles.erase(i)
 				p.add_collision_exception_with(collider)
-		i["ticks"] += 1
+		i["time"] += delta

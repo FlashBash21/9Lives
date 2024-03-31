@@ -9,9 +9,6 @@ var adjacent_areas: PackedInt32Array #small array bc we wont need large
 func _ready() -> void:
 	add_to_group("Area")
 
-func ping():
-	print("pong!")
-
 func load_entity(entity: Entity) -> void:
 	add_child(entity)
 

@@ -15,3 +15,10 @@ res://Scenes/Abilities/dash_ability.tscn
 res://Scenes/Abilities/punch_ability.tscn
 res://Scripts/Entities/test_enemy.gd
 res://Scenes/Areas/area_0.tscn
+res://Scripts/Areas/area_0.gd
+res://Scripts/Areas/base_area.gd
+res://Scripts/Areas/world_manager.gd
+res://Scripts/Abilities/Ability.gd
+res://Scripts/Abilities/move_ability.gd
+res://Scripts/Abilities/dash_ability.gd
+res://Scripts/Abilities/projectile_ability.gd

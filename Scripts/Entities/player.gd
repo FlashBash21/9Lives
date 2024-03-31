@@ -1,7 +1,7 @@
 extends Entity
 class_name Player
 
-var print_ability := load_ability("print")
+
 var move_ability := load_ability("move")
 var dash_ability := load_ability("dash")
 var basic_projectile_ability := load_ability("basic_projectile")
@@ -10,8 +10,6 @@ var melee_ability := load_ability("melee")
 func _ready() -> void:
 	#setup local vars
 	self.speed = 300
-
-	print_ability.execute({})
 	
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.

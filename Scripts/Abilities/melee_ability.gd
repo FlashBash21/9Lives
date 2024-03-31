@@ -27,7 +27,6 @@ func execute(args: Dictionary) -> void:
 		local_cooldown = cd
 		position = Vector2.ZERO
 		var dir := (at - to_global(position)).normalized()
-		print(dir)
 		look_at(at)
 		position = dir * range
 		attack_player.speed_scale = attack_multi
@@ -51,7 +50,6 @@ func hit_entities_in_range() -> void:
 			for group in effector_groups:
 				if body.is_in_group(group):
 					body.apply_damage(5)
-					print("hit")
 					break
 
 func clear_recent_hits() -> void:
