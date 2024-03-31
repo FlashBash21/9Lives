@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm4x47g2pyrhx"]
+[gd_scene load_steps=4 format=3 uid="uid://bm4x47g2pyrhx"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_0.gd" id="1_eo57l"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_syyrj"]
+[ext_resource type="PackedScene" uid="uid://ctnqeooju8vil" path="res://Scenes/Entites/test_enemy.tscn" id="3_tiibs"]
 
 [node name="Area 0" type="Node2D"]
 script = ExtResource("1_eo57l")
@@ -15,3 +16,6 @@ offset_bottom = 361.0
 [node name="AreaDoor" parent="." instance=ExtResource("2_syyrj")]
 position = Vector2(51, 285)
 Area = 1
+
+[node name="TestEnemy" parent="." instance=ExtResource("3_tiibs")]
+position = Vector2(99, 140)

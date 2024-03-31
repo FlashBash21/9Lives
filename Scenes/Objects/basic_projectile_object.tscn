@@ -6,7 +6,7 @@
 
 [node name="BasicProjectileObject" type="CharacterBody2D"]
 collision_layer = 0
-collision_mask = 0
+collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(20, 20)

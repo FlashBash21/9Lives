@@ -30,13 +30,14 @@ func _physics_process(delta: float) -> void:
 			
 	#projectile ability
 	if(Input.is_action_pressed("attack")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
-									"cooldown" = 1, "damage" = 5}))
+									"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
 	
 	#melee ability
 	if(Input.is_action_pressed("attack")): melee_ability.execute({"entity" = self,
 														"at" = get_global_mouse_position(),
 														"cooldown" = 0.25,
-														"attack_rate" = 1})
+														"attack_rate" = 1,
+														"effectors" = ["Enemy"]})
 	
 func apply_damage(ammount: int) -> void:
 	hp = hp -  ammount

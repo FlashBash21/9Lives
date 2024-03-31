@@ -13,8 +13,9 @@ func execute(args: Dictionary) -> void:
 	var direction = args["direction"] as Vector2
 	local_cooldown = args["cooldown"] as float
 	var damage = args["damage"] as int
+	var effectors = args["effectors"] as Array[StringName]
 	
-	
+	effector_groups = effectors
 	
 	if last_shot < local_cooldown: return 		#ability still on cooldown
 	else: last_shot = 0

@@ -7,6 +7,7 @@ var punch := load_ability("punch")
 func _ready():
 	self.hp = 15
 	punch.execute({"entity" = self, "cooldown" = 1, "damage" = 5 })
+	add_to_group("Enemy")
 
 
 
