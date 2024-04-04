@@ -25,6 +25,8 @@ func execute(args: Dictionary) -> void:
 func _process(delta):
 	attack_player.play("new_animation", -1, 1)
 	hit_entities_in_range()
+	#print("Local: " + str(self.position))
+	#print("Global: " + str(self.global_position))
 
 
 func hit_entities_in_range() -> void:

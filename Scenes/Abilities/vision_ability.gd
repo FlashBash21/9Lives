@@ -32,6 +32,8 @@ func _physics_process(delta: float) -> void:
 	
 func spotted():
 	var bodies = collision_area.get_overlapping_bodies() as Array[Entity]
+	#print(bodies)
+	#print(collision_area.monitoring)
 	for body in bodies:
 		for group in effector_groups:
 			if body.is_in_group(group):
@@ -42,8 +44,9 @@ func spotted():
 
 func moveTo():
 	entity.look_at(target_location)
-	var direction = entity.position.direction_to(to_global(target_location))
+	var direction = (target_location - entity.position).normalized()
 	var distance = entity.position.distance_to(target_location)
 	entity.velocity = direction * speed
+	#print(direction * speed)
 	if (distance > 10):
 		entity.move_and_slide()

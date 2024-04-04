@@ -33,4 +33,6 @@ func load_ability(name:String) -> Ability:
 					Check your scene exists with the proper name" % name)
 		return null
 	add_child(abilityNode)
+	print("Local: " + str(abilityNode.position))
+	print("Global: " + str(abilityNode.global_position))
 	return abilityNode

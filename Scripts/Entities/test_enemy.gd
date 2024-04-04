@@ -2,8 +2,8 @@ extends Entity
 class_name Enemy
 
 
-var punch_ability := load_ability("punch")
-var vision_ability := load_ability("vision")
+@onready var punch_ability := load_ability("punch")
+@onready var vision_ability := load_ability("vision")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.hp = 15

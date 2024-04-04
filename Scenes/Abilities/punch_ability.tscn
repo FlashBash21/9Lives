@@ -6,6 +6,7 @@
 
 [sub_resource type="Animation" id="Animation_totgt"]
 resource_name = "new_animation"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,10 +14,10 @@ tracks/0/path = NodePath("Area2D:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true, false]
+"values": [true, false]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -25,7 +26,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
+"times": PackedFloat32Array(0.4),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -43,7 +44,6 @@ script = ExtResource("1_1fwv1")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
-monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vrdqv")
