@@ -25,6 +25,11 @@ func modify_life(amount: int) -> void:
 	pass
 func apply_damage(ammount: int) -> void:
 	pass
+	
+#IMPORTANT
+#for abilities to load properly, their parent entities should be instantiated via code
+#adding parent entities to the scene via the editor may cause unintended errors
+#IMPORTANT
 func load_ability(name:String) -> Ability:
 	var ability = load("res://Scenes/Abilities/%s_ability.tscn" % name)
 	var abilityNode = ability.instantiate() as Ability
@@ -33,6 +38,4 @@ func load_ability(name:String) -> Ability:
 					Check your scene exists with the proper name" % name)
 		return null
 	add_child(abilityNode)
-	print("Local: " + str(abilityNode.position))
-	print("Global: " + str(abilityNode.global_position))
 	return abilityNode
