@@ -9,8 +9,9 @@ var melee_ability := load_ability("melee")
 
 func _ready() -> void:
 	#setup local vars
+	self.hp = 15
 	self.speed = 300
-
+	add_to_group("Player")
 	print_ability.execute({})
 	
 func _physics_process(delta: float) -> void:

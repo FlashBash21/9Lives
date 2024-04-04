@@ -1,14 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://kuohfwx8v133"]
+[gd_scene load_steps=5 format=3 uid="uid://kuohfwx8v133"]
 
 [ext_resource type="Script" path="res://Scripts/Abilities/punch_ability.gd" id="1_1fwv1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sjheu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrdqv"]
 
-[node name="PunchAbility" type="RigidBody2D"]
+[sub_resource type="Animation" id="Animation_totgt"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"clear_recent_hits"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j50md"]
+_data = {
+"new_animation": SubResource("Animation_totgt")
+}
+
+[node name="PunchAbility" type="Node2D"]
 script = ExtResource("1_1fwv1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(20, 20)
-shape = SubResource("CircleShape2D_sjheu")
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+monitoring = false
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_vrdqv")
+
+[node name="AttackPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j50md")
+}

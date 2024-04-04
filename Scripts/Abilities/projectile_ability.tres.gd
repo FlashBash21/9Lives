@@ -34,6 +34,7 @@ func _physics_process(delta):
 			for group in effector_groups:
 				if collider.is_in_group(group):
 						collider.apply_damage(damage)
+						print("projectile hit")
 						p.queue_free()
 						projectiles.erase(i)
 				p.add_collision_exception_with(collider)

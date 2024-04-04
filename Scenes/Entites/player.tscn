@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://Scripts/Entities/player.gd" id="1_mqpro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ouw1c"]
+size = Vector2(40, 40)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D"]
 collision_mask = 8
 script = ExtResource("1_mqpro")
 
@@ -16,4 +17,5 @@ offset_bottom = 20.0
 color = Color(0, 0, 1, 1)
 
 [node name="Hurtbox" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_ouw1c")
