@@ -29,6 +29,9 @@ func apply_damage(ammount: int) -> void:
 #IMPORTANT
 #for abilities to load properly, their parent entities should be instantiated via code
 #adding parent entities to the scene via the editor may cause unintended errors
+#this code has been designed with this limitation in mind. all entities should be able to
+#be easily instantiated into an area via helper functions. doing this yourself should
+#not be hard
 #IMPORTANT
 func load_ability(name:String) -> Ability:
 	var ability = load("res://Scenes/Abilities/%s_ability.tscn" % name)
