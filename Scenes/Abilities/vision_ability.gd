@@ -17,9 +17,7 @@ func execute(args: Dictionary) -> void:
 	
 	self.position = entity.position
 	self.scale = range 
-	
-	#spotted()
-	#moveTo()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -38,15 +36,14 @@ func spotted():
 		for group in effector_groups:
 			if body.is_in_group(group):
 					target_location = (body.position)
-					#print(target_location)
-					break
-			else: target_location = self.position
+					return
+	target_location = entity.position
 
 func moveTo():
 	entity.look_at(target_location)
-	var direction = (target_location - entity.position).normalized()
-	var distance = entity.position.distance_to(target_location)
-	entity.velocity = direction * speed
-	#print(direction * speed)
-	if (distance > 10):
-		entity.move_and_slide()
+	var direction = (target_location - entity.position)
+	if (direction.length() != 0):	
+		var distance = entity.position.distance_to(target_location)
+		entity.velocity = direction.normalized() * speed
+		if (distance > 10):
+			entity.move_and_slide()

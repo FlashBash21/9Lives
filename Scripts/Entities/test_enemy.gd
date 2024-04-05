@@ -16,7 +16,7 @@ func _ready():
 	
 	vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],
-						"range" = self.scale * 100,
+						"range" = self.scale * 20,
 						"speed" = 100}))			
 	#punch_ability.global_position = self.global_position
 	

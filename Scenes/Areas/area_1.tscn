@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfi1ysx04scl8"]
+[gd_scene load_steps=3 format=3 uid="uid://bfi1ysx04scl8"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_bpvbr"]
+[ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_qwe73"]
 
 [node name="Area 1" type="Node2D"]
 script = ExtResource("1_bpvbr")
@@ -11,3 +12,7 @@ offset_top = 163.0
 offset_right = 643.0
 offset_bottom = 434.0
 color = Color(1, 0, 1, 1)
+
+[node name="AreaDoor" parent="." instance=ExtResource("2_qwe73")]
+position = Vector2(1102, 48)
+Area = 2

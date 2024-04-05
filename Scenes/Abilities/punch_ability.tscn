@@ -44,9 +44,11 @@ script = ExtResource("1_1fwv1")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vrdqv")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
 
 [node name="AttackPlayer" type="AnimationPlayer" parent="."]
 libraries = {
