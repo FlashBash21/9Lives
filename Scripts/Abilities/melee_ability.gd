@@ -35,13 +35,12 @@ func execute(args: Dictionary) -> void:
 
 func _process(delta):
 	local_cooldown -= delta
-	hit_entities_in_range()
-	
+	hit_entities_in_range()	
 
 
 func _on_attack_player_animation_finished(anim_name):
 	local_cooldown = cd
-	
+
 
 func hit_entities_in_range() -> void:
 	if !collision_area.monitoring:

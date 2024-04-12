@@ -13,6 +13,20 @@ offset_right = 728.0
 offset_bottom = 361.0
 color = Color(0.47451, 0.180392, 0.466667, 1)
 
-[node name="AreaDoor" parent="." instance=ExtResource("2_syyrj")]
-position = Vector2(65, 587)
+[node name="Boss Room" parent="." instance=ExtResource("2_syyrj")]
+position = Vector2(575, 628)
 Area = 1
+
+[node name="Right Room" parent="." instance=ExtResource("2_syyrj")]
+position = Vector2(1130, 325)
+scale = Vector2(0.933028, 0.997716)
+Area = 2
+
+[node name="Left Room" parent="." instance=ExtResource("2_syyrj")]
+position = Vector2(19, 325)
+scale = Vector2(1.00068, 1)
+Area = 3
+
+[node name="Top Room" parent="." instance=ExtResource("2_syyrj")]
+position = Vector2(575, 22)
+Area = 4

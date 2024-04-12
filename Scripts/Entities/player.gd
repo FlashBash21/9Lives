@@ -13,7 +13,7 @@ func _ready() -> void:
 	self.speed = 300
 	add_to_group("Player")
 	print_ability.execute({})
-	
+
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 														"cooldown" = 0.25,
 														"attack_rate" = 1,
 														"effectors" = ["Enemy"]})
-	
+
 func apply_damage(ammount: int) -> void:
 	hp = hp -  ammount
 	print("hp: ", hp)	

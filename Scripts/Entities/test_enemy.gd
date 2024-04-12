@@ -19,11 +19,10 @@ func _ready():
 						"range" = self.scale * 20,
 						"speed" = 100}))			
 	#punch_ability.global_position = self.global_position
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	pass
-		
 
 
 
@@ -34,4 +33,3 @@ func apply_damage(ammount: int) -> void:
 	if hp <= 0 : 
 		print("dead")
 		self.queue_free()
-	

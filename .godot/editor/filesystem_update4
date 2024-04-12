@@ -19,3 +19,15 @@ res://Scripts/Areas/Area Objects/area_door.gd
 res://Scripts/Areas/base_area.gd
 res://Scripts/Areas/world_manager.gd
 res://Scenes/Areas/area_2.tscn
+res://Scripts/Entities/player.gd
+res://Scenes/Areas/area_left_1.tscn
+res://Scenes/Areas/area_Boss.tscn
+res://Scenes/Areas/area_3.tscn
+res://Scenes/Areas/area_22.tscn
+res://Scenes/Areas/area_4.tscn
+res://Scenes/Areas/area_222.tscn
+res://Scenes/Areas/area_33.tscn
+res://Scenes/Areas/area_333.tscn
+res://Scenes/Areas/area_44.tscn
+res://Scenes/Areas/area_444.tscn
+res://Scenes/Areas/world_manager.tscn

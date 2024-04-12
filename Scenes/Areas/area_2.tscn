@@ -11,8 +11,11 @@ offset_left = 518.0
 offset_top = 163.0
 offset_right = 643.0
 offset_bottom = 434.0
-color = Color(0.564706, 0.6, 0.866667, 1)
+color = Color(0.596078, 0.603922, 0.803922, 1)
+
+[node name="mainRoom" parent="." instance=ExtResource("2_qnbfg")]
+position = Vector2(20, 325)
 
 [node name="AreaDoor" parent="." instance=ExtResource("2_qnbfg")]
-position = Vector2(147, 298)
-Area = 1
+position = Vector2(1128, 325)
+Area = 22

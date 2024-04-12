@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmp20b42scowl"]
+
+[ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_6g3ml"]
+[ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_da3ov"]
+
+[node name="Area 1" type="Node2D"]
+script = ExtResource("1_6g3ml")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 518.0
+offset_top = 163.0
+offset_right = 643.0
+offset_bottom = 434.0
+color = Color(0.588235, 0.556863, 0.992157, 1)
+
+[node name="AreaDoor" parent="." instance=ExtResource("2_da3ov")]
+position = Vector2(20, 325)
+Area = 22
