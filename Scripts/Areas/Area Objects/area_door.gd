@@ -3,17 +3,17 @@ class_name AreaDoor
 
 @export var Area := 0
 var enabled = false
-var grace_period = 2
+var grace_period = 0.1
 
 
 func _process(delta) -> void:
 	if grace_period > 0:
-		grace_period -= 1
+		grace_period -= delta
 		return
 	var bodies = get_overlapping_bodies()
+	#don't allow the door to teleport unless the player has stepped off it
 	if (bodies.size() == 0):
 		enabled = true
-		
 	if (bodies.size() > 0 and enabled):
 		var body = bodies[0] as Entity
 		var parent = get_parent() as BaseArea
