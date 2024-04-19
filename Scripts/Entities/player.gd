@@ -10,6 +10,7 @@ var melee_ability := load_ability("melee")
 func _ready() -> void:
 	#setup local vars
 	self.speed = 300
+	add_to_group("Player")
 	
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.

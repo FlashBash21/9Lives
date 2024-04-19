@@ -1,6 +1,4 @@
 extends Entity
-class_name Enemy
-
 
 var punch := load_ability("punch")
 # Called when the node enters the scene tree for the first time.
