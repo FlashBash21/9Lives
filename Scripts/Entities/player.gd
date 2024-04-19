@@ -1,7 +1,7 @@
 extends Entity
 class_name Player
 
-var print_ability := load_ability("print")
+
 var move_ability := load_ability("move")
 var dash_ability := load_ability("dash")
 var basic_projectile_ability := load_ability("basic_projectile")

@@ -9,7 +9,6 @@ func _ready() -> void:
 	var player = load("res://Scenes/Entites/player.tscn")
 	player_ref = player.instantiate()
 	load_area(0)
-	area_ref.ping()
 
 func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("ui_accept")):
@@ -21,6 +20,7 @@ func _process(delta: float) -> void:
 #automatically unloads current area and connects to its area query signal
 func load_area(area_num: int) -> void:
 	#load area and add it as a child
+	print("loading area: " + str(area_num))
 	current_area = area_num
 	if (area_ref):
 		area_ref.clean_entites()
@@ -28,6 +28,6 @@ func load_area(area_num: int) -> void:
 	var next = load("res://Scenes/Areas/area_%d.tscn" % area_num) #string formatting!
 	area_ref = next.instantiate()
 	add_child(area_ref)
-	area_ref.load_entity(player_ref)
+	area_ref.add_entity(player_ref)
 	#reconnect the signal
 	area_ref.query_area_load.connect(load_area, CONNECT_DEFERRED)
