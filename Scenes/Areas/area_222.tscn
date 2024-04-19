@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmp20b42scowl"]
+[gd_scene load_steps=4 format=3 uid="uid://cmp20b42scowl"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_6g3ml"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_da3ov"]
+[ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="3_oyssr"]
 
 [node name="Area 1" type="Node2D"]
 script = ExtResource("1_6g3ml")
@@ -16,3 +17,19 @@ color = Color(0.588235, 0.556863, 0.992157, 1)
 [node name="AreaDoor" parent="." instance=ExtResource("2_da3ov")]
 position = Vector2(20, 325)
 Area = 22
+
+[node name="AreaWall" parent="." instance=ExtResource("3_oyssr")]
+position = Vector2(0, 329)
+scale = Vector2(1, 33.4425)
+
+[node name="AreaWall2" parent="." instance=ExtResource("3_oyssr")]
+position = Vector2(1160, 327)
+scale = Vector2(0.998171, 33.4425)
+
+[node name="AreaWall3" parent="." instance=ExtResource("3_oyssr")]
+position = Vector2(588, 642)
+scale = Vector2(58, 1.00254)
+
+[node name="AreaWall4" parent="." instance=ExtResource("3_oyssr")]
+position = Vector2(586, 4)
+scale = Vector2(58, 1.00254)

@@ -12,6 +12,7 @@ func _ready() -> void:
 	self.hp = 15
 	self.speed = 300
 	add_to_group("Player")
+	self.position = Vector2(575,325)
 	print_ability.execute({})
 
 func _physics_process(delta: float) -> void:
@@ -43,3 +44,9 @@ func _physics_process(delta: float) -> void:
 func apply_damage(ammount: int) -> void:
 	hp = hp -  ammount
 	print("hp: ", hp)	
+	if (hp <= 0):
+		var parent = get_parent() as BaseArea
+		parent.query_area_load.emit(0)
+		hp = 15
+		self.position = Vector2(575,325)
+		

@@ -31,3 +31,5 @@ res://Scenes/Areas/area_333.tscn
 res://Scenes/Areas/area_44.tscn
 res://Scenes/Areas/area_444.tscn
 res://Scenes/Areas/world_manager.tscn
+res://Scripts/Areas/Area Objects/area_wall.tscn
+res://Scenes/Areas/Area Objects/area_wall.tscn

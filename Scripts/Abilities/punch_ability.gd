@@ -15,12 +15,12 @@ func execute(args: Dictionary) -> void:
 	damage = args["damage"] as int
 	var effectors = args["effectors"] as Array[StringName]
 	attack_multi = args["attack_rate"] as float
-	
+
 	effector_groups = effectors
 	self.position = entity.position
 	self.scale = entity.scale
 	attack_player.speed_scale = attack_multi
-	
+
 
 func _process(delta):
 	attack_player.play("new_animation", -1, 1)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0mxqe0lu1c3c"]
+[gd_scene load_steps=4 format=3 uid="uid://c0mxqe0lu1c3c"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_ej58h"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_ucsw3"]
+[ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="3_2ub2j"]
 
 [node name="area_1" type="Node2D"]
 script = ExtResource("1_ej58h")
@@ -20,3 +21,19 @@ Area = 4
 [node name="AreaDoor2" parent="." instance=ExtResource("2_ucsw3")]
 position = Vector2(575, 20)
 Area = 444
+
+[node name="AreaWall" parent="." instance=ExtResource("3_2ub2j")]
+position = Vector2(2, 325)
+scale = Vector2(1, 32.8825)
+
+[node name="AreaWall2" parent="." instance=ExtResource("3_2ub2j")]
+position = Vector2(1147, 323)
+scale = Vector2(1, 32.8825)
+
+[node name="AreaWall3" parent="." instance=ExtResource("3_2ub2j")]
+position = Vector2(568, 644)
+scale = Vector2(57.64, 1.00254)
+
+[node name="AreaWall4" parent="." instance=ExtResource("3_2ub2j")]
+position = Vector2(581, 4)
+scale = Vector2(57.64, 1.00254)
