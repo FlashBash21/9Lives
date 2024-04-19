@@ -1,8 +1,6 @@
-res://Scenes/Abilities/punch_ability.tscn
-res://Scripts/Areas/area_0.gd
-res://Scripts/Entities/player.gd
-res://Scenes/Entites/player.tscn
-res://Scenes/Entites/test_enemy.tscn
-res://Scenes/Areas/area_0.tscn
 res://Scenes/Areas/world_manager.tscn
-res://Scenes/Areas/Area Objects/area_door.tscn
+res://Scenes/Entites/player.tscn
+res://Scripts/Entities/player.gd
+res://Scenes/Abilities/dash_ability.tscn
+res://Scripts/Abilities/dash_ability.gd
+res://Scenes/Abilities/move_ability.tscn

@@ -15,6 +15,8 @@ func _ready() -> void:
 	add_to_group("Player")
 	self.position = Vector2(575,325)
 	
+	dash_ability.level_up()
+	
 	health_bar = load_ability("healthBar")
 	var freeNode = Node.new()
 	add_child(freeNode)
@@ -35,7 +37,8 @@ func _physics_process(delta: float) -> void:
 	
 	#dash if we are not dashing and we are moving
 	if (!dash_ability.is_dashing() and dir != Vector2.ZERO):
-		if (Input.is_action_just_pressed("dash")): dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
+		if (Input.is_action_just_pressed("dash")):
+			dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
 			
 	#projectile ability
 	if(Input.is_action_pressed("attack")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
@@ -49,10 +52,11 @@ func _physics_process(delta: float) -> void:
 														"effectors" = ["Enemy"]})
 
 func apply_damage(amount: int) -> void:
+	if (dash_ability.is_dashing()): return
 	hp = hp - amount
-	health_bar.execute({"hp": hp})
 	if (hp <= 0):
 		var parent = get_parent() as BaseArea
 		parent.query_area_load.emit(0)
-		hp = 15
+		hp = 5
 		self.position = Vector2(575,325)
+	health_bar.execute({"hp": hp})
