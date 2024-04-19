@@ -38,7 +38,7 @@ func hit_entities_in_range() -> void:
 			recent_hits.append(body)
 			for group in effector_groups:
 				if body.is_in_group(group):
-					body.apply_damage(5)
+					body.apply_damage(damage)
 					print("punch hit")
 					break
 
