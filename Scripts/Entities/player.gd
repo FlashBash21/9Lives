@@ -14,7 +14,6 @@ func _ready() -> void:
 	self.speed = 300
 	add_to_group("Player")
 	self.position = Vector2(575,325)
-	print_ability.execute({})
 	
 	health_bar = load_ability("healthBar")
 	var freeNode = Node.new()
