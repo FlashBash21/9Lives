@@ -1,6 +1,4 @@
 extends Entity
-class_name Enemy
-
 
 var punch_ability : Ability
 var vision_ability := load_ability("vision")

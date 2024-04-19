@@ -9,11 +9,19 @@ var adjacent_areas: PackedInt32Array #small array bc we wont need large
 func _ready() -> void:
 	add_to_group("Area")
 
-func ping():
-	print("pong!")
-
-func load_entity(entity: Entity) -> void:
+#adds an already loaded entity to the area
+func add_entity(entity: Entity) -> void:
 	add_child(entity)
+
+#loads an unloaded entity and adds it to the area
+func load_entity(entity: StringName) -> Entity:
+	var loaded_entity = load("res://Scenes/Entites/" + entity + ".tscn")
+	if (!loaded_entity):
+		push_error("Invalid Path: res://Scenes/Entites/" + entity + ".tscn")
+		return null
+	var ref = loaded_entity.instantiate()
+	add_child(ref)
+	return ref
 
 func load_projectile(proj: Projectile) -> void:
 	add_child(proj)

@@ -7,7 +7,7 @@ var duration: float
 var dir: Vector2
 
 func execute(args: Dictionary) -> void:
-	if local_cooldown <= 0.5:
+	if local_cooldown <= 0.5 || level < 1:
 		return
 	local_cooldown = 0
 	entity = args["entity"] as Entity
