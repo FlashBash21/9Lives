@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://6ltl2ft44yy6"]
 
-[ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_ba1l1"]
+[ext_resource type="Script" path="res://Scripts/Areas/area_3.gd" id="1_5ao06"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_auomm"]
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="3_y0l8i"]
 
-[node name="area_1" type="Node2D"]
-script = ExtResource("1_ba1l1")
+[node name="Area 3" type="Node2D"]
+script = ExtResource("1_5ao06")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = 518.0

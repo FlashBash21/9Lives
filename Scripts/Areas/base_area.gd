@@ -4,7 +4,7 @@ class_name BaseArea
 signal query_area_load(area) #emit this to ask the area manager to switch areas
 
 var enemy_type: Entity #TODO: make enemy class and have enemy_type be of type 'Enemy'
-var adjacent_areas: PackedInt32Array #small array bc we wont need large
+var area_ability: StringName
 
 func _ready() -> void:
 	add_to_group("Area")

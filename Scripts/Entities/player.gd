@@ -10,7 +10,7 @@ var health_bar : Ability
 
 func _ready() -> void:
 	#setup local vars
-	self.hp = 5
+	self.hp = 2
 	self.speed = 300
 	add_to_group("Player")
 	self.position = Vector2(575,325)
@@ -55,9 +55,19 @@ func apply_damage(amount: int) -> void:
 	if (dash_ability.is_dashing()): return
 	hp = hp - amount
 	if (hp <= 0):
-		print("Dead")
-		var parent = get_parent() as BaseArea
-		parent.query_area_load.emit(0)
-		hp = 5
-		self.position = Vector2(575,325)
+		handle_death()
+
+func handle_death() -> void:
+	var parent = get_parent() as BaseArea
+	match parent.area_ability:
+		"Move":
+			move_ability.level_up()	
+		"Dash":
+			dash_ability.level_up()
+		_:
+			pass
+	#make parent signal an area load
+	parent.query_area_load.emit(0)
+	self.hp = 2
 	health_bar.execute({"hp": hp})
+	self.position = Vector2(575,325)
