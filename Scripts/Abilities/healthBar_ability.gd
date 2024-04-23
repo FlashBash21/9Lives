@@ -1,5 +1,7 @@
 extends Ability
 
+var heart = preload("res://Scenes/Objects/heart.tscn")
+
 func execute(args: Dictionary) -> void:
 	var hp = args["hp"] as int
 	var count = get_child_count()
@@ -9,6 +11,6 @@ func execute(args: Dictionary) -> void:
 			remove_child(get_child(count))
 	elif (count < hp):
 		for i in range(count, hp):
-			var newHeart = $Heart.duplicate()
+			var newHeart = heart.instantiate()
 			newHeart.position = Vector2(i * 50, 0)
 			add_child(newHeart)
