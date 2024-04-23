@@ -1,7 +1,16 @@
-res://Scenes/Entites/boss.tscn
+res://Scenes/Areas/world_manager.tscn
+res://Scripts/Entities/test_enemy.gd
+res://Scenes/Entites/player.tscn
+res://Scripts/Entities/player.gd
+res://Scenes/Abilities/healthBar_ability.tscn
+res://Scenes/Entites/tri_ranged_enemy.tscn
+res://Scenes/Entites/ranged_enemy.tscn
+res://Scenes/Areas/area_2.tscn
+res://Scripts/Areas/area_2.gd
 res://Scenes/Areas/area_1.tscn
 res://Scenes/Areas/area_0.tscn
-res://Scenes/Areas/Area Objects/area_wall.tscn
-res://Scenes/Entites/player.tscn
 res://Scenes/Areas/Area Objects/area_door.tscn
-res://Scripts/Entities/boss.gd
+res://Scripts/Entities/ranged_enemy.gd
+res://Scenes/Areas/area_3.tscn
+res://Scenes/Areas/area_4.tscn
+res://Scenes/Entites/test_enemy.tscn

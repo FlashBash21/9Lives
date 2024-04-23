@@ -62,7 +62,8 @@ func _physics_process(delta: float) -> void:
 
 func apply_damage(amount: int) -> void:
 	if (dash_ability.is_dashing()): return
-	hp = hp - amount
+	health_bar.execute({"hp":amount})
+	hp -= amount
 	if (hp <= 0):
 		handle_death()
 
@@ -73,6 +74,8 @@ func handle_death() -> void:
 			move_ability.level_up()	
 		"Dash":
 			dash_ability.level_up()
+		"BasicRanged":
+			basic_projectile_ability.level_up()
 		_:
 			pass
 	#make parent signal an area load

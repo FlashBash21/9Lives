@@ -8,6 +8,7 @@ var shoot_at = velocity
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	basic_projectile_ability.level_up()
 	self.hp = 15
 	add_to_group("Enemy")
 	
@@ -23,6 +24,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 		var player = get_tree().get_nodes_in_group("Player").pop_front()
 		var shoot_at = player.position - self.position
+		print("shooting at: " + str(shoot_at))
 		basic_projectile_ability.execute(({"entity" = self, "speed" = 500, "direction" = shoot_at, 
 									"cooldown" = 2, "damage" = 1, "effectors" = ["Player"]}))
 		
