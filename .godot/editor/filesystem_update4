@@ -1,6 +1,7 @@
-res://Scenes/Areas/world_manager.tscn
+res://Scenes/Entites/boss.tscn
+res://Scenes/Areas/area_1.tscn
+res://Scenes/Areas/area_0.tscn
+res://Scenes/Areas/Area Objects/area_wall.tscn
 res://Scenes/Entites/player.tscn
-res://Scripts/Entities/player.gd
-res://Scenes/Abilities/dash_ability.tscn
-res://Scripts/Abilities/dash_ability.gd
-res://Scenes/Abilities/move_ability.tscn
+res://Scenes/Areas/Area Objects/area_door.tscn
+res://Scripts/Entities/boss.gd

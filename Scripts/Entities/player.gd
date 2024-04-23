@@ -55,6 +55,7 @@ func apply_damage(amount: int) -> void:
 	if (dash_ability.is_dashing()): return
 	hp = hp - amount
 	if (hp <= 0):
+		print("Dead")
 		var parent = get_parent() as BaseArea
 		parent.query_area_load.emit(0)
 		hp = 5

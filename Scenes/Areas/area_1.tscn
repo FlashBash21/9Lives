@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfi1ysx04scl8"]
+[gd_scene load_steps=3 format=3 uid="uid://bfi1ysx04scl8"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_bpvbr"]
+[ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="2_yyhqo"]
 
 [node name="area_1" type="Node2D"]
 script = ExtResource("1_bpvbr")
@@ -11,3 +12,19 @@ offset_top = 163.0
 offset_right = 643.0
 offset_bottom = 434.0
 color = Color(1, 0, 1, 1)
+
+[node name="AreaWall" parent="." instance=ExtResource("2_yyhqo")]
+position = Vector2(3.00002, 325)
+scale = Vector2(-0.551928, 32.5486)
+
+[node name="AreaWall2" parent="." instance=ExtResource("2_yyhqo")]
+position = Vector2(576, 648)
+scale = Vector2(57.5889, 0.452694)
+
+[node name="AreaWall3" parent="." instance=ExtResource("2_yyhqo")]
+position = Vector2(1149, 327)
+scale = Vector2(0.411945, 32.9402)
+
+[node name="AreaWall4" parent="." instance=ExtResource("2_yyhqo")]
+position = Vector2(575, 5)
+scale = Vector2(57.12, 0.522541)
