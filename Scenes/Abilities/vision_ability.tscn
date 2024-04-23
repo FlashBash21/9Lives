@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://diocdqv1tbrcr"]
 
-[ext_resource type="Script" path="res://Scenes/Abilities/vision_ability.gd" id="1_h6csa"]
+[ext_resource type="Script" path="res://Scripts/Abilities/vision_ability.gd" id="1_h6csa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_totjn"]
 
