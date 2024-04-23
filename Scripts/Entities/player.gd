@@ -76,6 +76,8 @@ func handle_death() -> void:
 			dash_ability.level_up()
 		"BasicRanged":
 			basic_projectile_ability.level_up()
+		"TriRanged":
+			tri_shot_ability.level_up()
 		_:
 			pass
 	#make parent signal an area load

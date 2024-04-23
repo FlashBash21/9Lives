@@ -5,3 +5,4 @@ var area_ref: BaseArea
 
 func _ready() -> void:
 	super()
+	area_ability = "TriRanged"

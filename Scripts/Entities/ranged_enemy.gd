@@ -35,4 +35,5 @@ func apply_damage(ammount: int) -> void:
 	
 	if hp <= 0 : 
 		print("dead")
+		basic_projectile_ability.clean_up_projectiles()
 		self.queue_free()
