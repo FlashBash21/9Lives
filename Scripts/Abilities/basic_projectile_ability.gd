@@ -18,7 +18,7 @@ func execute(args: Dictionary) -> void:
 	effector_groups = effectors
 	add_effector_group(effector_groups[0])
 	
-	if last_shot < local_cooldown: return 		#ability still on cooldown
+	if last_shot < local_cooldown || level < 1: return 		#ability still on cooldown OR hasn't been aquired
 	else: last_shot = 0
 	
 	var projectile = basic_projectile_object.instantiate()
@@ -36,6 +36,6 @@ func execute(args: Dictionary) -> void:
 	projectiles.append({
 		"projectile": projectile,
 		"velocity": velocity,
-		"ticks": 0,
+		"time": 0,
 		"damage": damage
 		})

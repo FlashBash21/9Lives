@@ -1,6 +1,4 @@
 extends Entity
-#class_name Enemy
-
 
 var punch_ability : Ability
 var vision_ability := load_ability("vision")
@@ -11,7 +9,7 @@ func _ready():
 	add_to_group("Enemy")
 	punch_ability.execute({"entity" = self, 
 					"attack_rate" = .5,
-					"damage" = 5, 
+					"damage" = 1,
 					"effectors" = ["Player"]})
 	
 	vision_ability.execute(({"entity" = self,
@@ -26,8 +24,8 @@ func _physics_process(delta: float) -> void:
 
 
 
-func apply_damage(ammount: int) -> void:
-	hp = hp -  ammount
+func apply_damage(amount: int) -> void:
+	hp = hp - amount
 	print("hp: ", hp)	
 	
 	if hp <= 0 : 
