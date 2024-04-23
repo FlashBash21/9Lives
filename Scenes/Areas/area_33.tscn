@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvkk8jhbhxeeh"]
+[gd_scene load_steps=5 format=3 uid="uid://dvkk8jhbhxeeh"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_33.gd" id="1_58owq"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_vcxta"]
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="3_wb40d"]
+[ext_resource type="PackedScene" uid="uid://b7nfsc7a05w25" path="res://Scenes/Entites/dodge_enemy.tscn" id="4_bob8d"]
 
 [node name="Area 33" type="Node2D"]
 script = ExtResource("1_58owq")
@@ -37,3 +38,9 @@ scale = Vector2(57.64, 1.00254)
 [node name="AreaWall4" parent="." instance=ExtResource("3_wb40d")]
 position = Vector2(580, 6)
 scale = Vector2(57.64, 1.00254)
+
+[node name="TestEnemy" parent="." instance=ExtResource("4_bob8d")]
+position = Vector2(186, 156)
+
+[node name="TestEnemy2" parent="." instance=ExtResource("4_bob8d")]
+position = Vector2(199, 516)

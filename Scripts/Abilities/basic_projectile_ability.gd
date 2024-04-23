@@ -16,6 +16,7 @@ func execute(args: Dictionary) -> void:
 	var effectors = args["effectors"] as Array[StringName]
 	
 	effector_groups = effectors
+	add_effector_group(effector_groups[0])
 	
 	if last_shot < local_cooldown || level < 1: return 		#ability still on cooldown OR hasn't been aquired
 	else: last_shot = 0
@@ -28,7 +29,7 @@ func execute(args: Dictionary) -> void:
 		area = get_node("/root")
 	area.add_child(projectile)
 	
-	projectile.look_at(get_local_mouse_position())
+	projectile.look_at(direction)
 	projectile.position = get_parent().position
 	velocity = Vector2(1, 0).rotated(projectile.rotation) * speed
 	

@@ -15,8 +15,8 @@ func _ready():
 	vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],
 						"range" = self.scale * 20,
-						"speed" = 100}))			
-	#punch_ability.global_position = self.global_position
+						"speed" = 150}))			
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

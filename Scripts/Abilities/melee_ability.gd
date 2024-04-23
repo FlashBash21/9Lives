@@ -19,6 +19,7 @@ func execute(args: Dictionary) -> void:
 	cd = args["cooldown"] as float
 	var attack_multi := args["attack_rate"] as float
 	var effectors = args["effectors"] as Array[StringName]
+	range = args["range"] as float
 	
 	effector_groups = effectors
 	
@@ -51,7 +52,6 @@ func hit_entities_in_range() -> void:
 			for group in effector_groups:
 				if body.is_in_group(group):
 					body.apply_damage(5)
-					print("melee hit")
 					break
 
 func clear_recent_hits() -> void:

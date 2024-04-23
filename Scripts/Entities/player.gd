@@ -8,6 +8,8 @@ var basic_projectile_ability := load_ability("basic_projectile")
 var melee_ability := load_ability("melee")
 var health_bar : Ability
 
+var tri_shot_ability := load_ability("tri_shot_projectile")
+
 func _ready() -> void:
 	#setup local vars
 	self.hp = 2
@@ -41,14 +43,21 @@ func _physics_process(delta: float) -> void:
 			dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
 			
 	#projectile ability
-	if(Input.is_action_pressed("attack")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = dir, 
+	if(Input.is_action_pressed("attack")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = get_local_mouse_position(), 
 									"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
+	
+	
+	# tripple projectile ability
+	#if(Input.is_action_pressed("attack")): tri_shot_ability.execute(({"entity" = self, "speed" = 500, "direction" = get_local_mouse_position(), 
+	#								"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
+	
 	
 	#melee ability
 	if(Input.is_action_pressed("attack")): melee_ability.execute({"entity" = self,
 														"at" = get_global_mouse_position(),
 														"cooldown" = 0.25,
 														"attack_rate" = 1,
+														"range" = 100.00,
 														"effectors" = ["Enemy"]})
 
 func apply_damage(amount: int) -> void:

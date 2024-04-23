@@ -1,21 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctb5hxfvii7im"]
+[gd_scene load_steps=3 format=3 uid="uid://cehdsvkrfeflk"]
 
-[ext_resource type="Script" path="res://Scripts/Entities/ranged_enemy.gd" id="1_uyn72"]
+[ext_resource type="Script" path="res://Scripts/Entities/tri_ranged_enemy.gd" id="1_xirxf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mceb"]
-size = Vector2(30, 30)
 
 [node name="RangedEnemy" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 5
-script = ExtResource("1_uyn72")
+collision_mask = 12
+script = ExtResource("1_xirxf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4mceb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -15.0
-offset_top = -15.0
-offset_right = 15.0
-offset_bottom = 15.0
+offset_right = 40.0
+offset_bottom = 40.0
 color = Color(0.862745, 0.972549, 0, 1)
