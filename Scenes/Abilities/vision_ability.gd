@@ -21,12 +21,13 @@ func execute(args: Dictionary) -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	spotted()
 	moveTo()
-
+	
+	
 func spotted():
 	var bodies = collision_area.get_overlapping_bodies() as Array[Entity]
 	#print(bodies)
