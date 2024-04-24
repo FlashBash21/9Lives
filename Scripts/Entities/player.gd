@@ -7,12 +7,13 @@ var dash_ability := load_ability("dash")
 var basic_projectile_ability := load_ability("basic_projectile")
 var melee_ability := load_ability("melee")
 var health_bar : Ability
+var maxhealth = 2
 
 var tri_shot_ability := load_ability("tri_shot_projectile")
 
 func _ready() -> void:
 	#setup local vars
-	self.hp = 2
+	self.hp = maxhealth
 	self.speed = 300
 	add_to_group("Player")
 	self.position = Vector2(575,325)
@@ -76,10 +77,12 @@ func handle_death() -> void:
 			dash_ability.level_up()
 		"BasicRanged":
 			basic_projectile_ability.level_up()
+		"Health":
+			maxhealth += 1
 		_:
 			pass
 	#make parent signal an area load
 	parent.query_area_load.emit(0)
-	self.hp = 2
+	self.hp = maxhealth
 	health_bar.execute({"hp": hp})
 	self.position = Vector2(575,325)

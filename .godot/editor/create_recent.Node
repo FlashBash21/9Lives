@@ -1,3 +1,4 @@
+ColorRect
 CollisionShape2D
 Area2D
 Timer
@@ -6,7 +7,6 @@ StaticBody2D
 RigidBody2D
 Sprite2D
 AnimationPlayer
-ColorRect
 CharacterBody2D
 RigidBody2D
 Sprite2D
