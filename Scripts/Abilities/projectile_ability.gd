@@ -39,3 +39,9 @@ func _physics_process(delta):
 						projectiles.erase(i)
 				p.add_collision_exception_with(collider)
 		i["time"] += delta
+
+func clean_up_projectiles() -> void:
+	while projectiles.size() > 0:
+		var p = projectiles.pop_front()
+		p = p["projectile"] as CharacterBody2D
+		p.queue_free()

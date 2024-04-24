@@ -62,19 +62,22 @@ func execute(args: Dictionary) -> void:
 		"projectile": middle_projectile,
 		"velocity": middle_velocity,
 		"ticks": 0,
-		"damage": damage
+		"damage": damage,
+		"time": 0
 		})
 		
 	projectiles.append({
 		"projectile": left_projectile,
 		"velocity": left_velocity,
 		"ticks": 0,
-		"damage": damage
+		"damage": damage,
+		"time": 0
 		})
 		
 	projectiles.append({
 		"projectile": right_projectile,
 		"velocity": right_velocity,
 		"ticks": 0,
-		"damage": damage
+		"damage": damage,
+		"time": 0
 		})

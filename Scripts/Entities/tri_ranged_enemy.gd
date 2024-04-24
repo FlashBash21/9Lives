@@ -8,7 +8,7 @@ var shoot_at = velocity
 var once = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.hp = 15
+	self.hp = 5
 	add_to_group("Enemy")
 	
 	
@@ -33,4 +33,5 @@ func apply_damage(ammount: int) -> void:
 	
 	if hp <= 0 : 
 		print("dead")
+		tri_projectile_ability.clean_up_projectiles()
 		self.queue_free()

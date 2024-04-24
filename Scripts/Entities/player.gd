@@ -44,12 +44,12 @@ func _physics_process(delta: float) -> void:
 			dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.1})
 			
 	#projectile ability
-	if(Input.is_action_pressed("attack")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = get_local_mouse_position(), 
+	if(Input.is_action_pressed("attack")): basic_projectile_ability.execute(({"entity" = self, "speed" = 800, "direction" = get_local_mouse_position(),
 									"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
 	
 	
 	# tripple projectile ability
-	#if(Input.is_action_pressed("attack")): tri_shot_ability.execute(({"entity" = self, "speed" = 500, "direction" = get_local_mouse_position(), 
+	#if(Input.is_action_pressed("attack")): tri_shot_ability.execute(({"entity" = self, "speed" = 500, "direction" = get_local_mouse_position(),
 	#								"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
 	
 	
@@ -72,13 +72,15 @@ func handle_death() -> void:
 	var parent = get_parent() as BaseArea
 	match parent.area_ability:
 		"Move":
-			move_ability.level_up()	
+			move_ability.level_up()
 		"Dash":
 			dash_ability.level_up()
 		"BasicRanged":
 			basic_projectile_ability.level_up()
 		"Health":
 			maxhealth += 1
+		"TriRanged":
+			tri_shot_ability.level_up()
 		_:
 			pass
 	#make parent signal an area load

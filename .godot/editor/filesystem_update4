@@ -4,3 +4,16 @@ res://Scripts/Areas/area_1.gd
 res://Scripts/Entities/player.gd
 res://Scenes/Entites/player.tscn
 res://Scenes/Entites/boss.tscn
+res://Scenes/Areas/area_0.tscn
+res://Scenes/Areas/Area Objects/area_door.tscn
+res://Scripts/Entities/ranged_enemy.gd
+res://Scenes/Areas/area_3.tscn
+res://Scenes/Areas/area_4.tscn
+res://Scenes/Entites/test_enemy.tscn
+res://Scenes/Abilities/tri_shot_projectile_ability.tscn
+res://Scripts/Abilities/tri_shot_projectile_ability.gd
+res://Scenes/Areas/area_22.tscn
+res://Scripts/Areas/area_22.gd
+res://Scripts/Abilities/projectile_ability.gd
+res://Scripts/Entities/tri_ranged_enemy.gd
+res://Scenes/Objects/basic_projectile_object.tscn
