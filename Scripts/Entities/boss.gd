@@ -182,9 +182,9 @@ func apply_damage(amount: int) -> void:
 	hp = hp - amount * healthRate
 	health_bar.execute({"entity" = self, "max" = 200})
 	
-	if hp <= 0 : 
-		print("a winner is you")
+	if hp <= 0 :
 		self.queue_free()
 		health_bar.queue_free()
 		for bullet in projectiles:
 			(bullet["projectile"] as CharacterBody2D).queue_free()
+		get_tree().change_scene_to_file("res://Scenes/WinScreen.tscn")

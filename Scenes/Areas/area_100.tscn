@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://Scripts/Areas/area_100.gd" id="1_8a4nr"]
 
 [node name="Area100" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_8a4nr")

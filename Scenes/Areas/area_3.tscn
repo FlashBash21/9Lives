@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ctnqeooju8vil" path="res://Scenes/Entites/test_enemy.tscn" id="4_4q1dk"]
 
 [node name="Area 3" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_5ao06")
 
 [node name="ColorRect" type="ColorRect" parent="."]

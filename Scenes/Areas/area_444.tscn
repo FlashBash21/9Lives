@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="3_6byip"]
 
 [node name="Area 444" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_kwdbe")
 
 [node name="ColorRect" type="ColorRect" parent="."]

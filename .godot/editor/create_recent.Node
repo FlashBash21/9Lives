@@ -1,7 +1,10 @@
+Label
+ColorRect
+TextEdit
+Control
 Node2D
 Area2D
 Timer
-ColorRect
 Sprite2D
 CollisionShape2D
 StaticBody2D
@@ -9,4 +12,3 @@ RigidBody2D
 AnimationPlayer
 CharacterBody2D
 RigidBody2D
-Button

@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cehdsvkrfeflk" path="res://Scenes/Entites/tri_ranged_enemy.tscn" id="4_xe25i"]
 
 [node name="Area 2" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_3p81p")
 
 [node name="ColorRect" type="ColorRect" parent="."]

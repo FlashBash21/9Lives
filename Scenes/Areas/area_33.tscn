@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7nfsc7a05w25" path="res://Scenes/Entites/dodge_enemy.tscn" id="4_bob8d"]
 
 [node name="Area 33" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_58owq")
 
 [node name="ColorRect" type="ColorRect" parent="."]

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="2_yyhqo"]
 
 [node name="area_1" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_bpvbr")
 
 [node name="AreaWall" parent="." instance=ExtResource("2_yyhqo")]
