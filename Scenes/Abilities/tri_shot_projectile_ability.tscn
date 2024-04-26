@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://byes7ixvwi5im"]
+[gd_scene load_steps=2 format=3 uid="uid://gd821ynoh4t3"]
 
 [ext_resource type="Script" path="res://Scripts/Abilities/tri_shot_projectile_ability.gd" id="1_yj18c"]
 

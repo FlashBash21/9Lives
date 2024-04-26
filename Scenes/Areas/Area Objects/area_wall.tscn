@@ -23,7 +23,7 @@ scale = Vector2(1, 1.00254)
 script = SubResource("GDScript_ywb57")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 8
+collision_layer = 10
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

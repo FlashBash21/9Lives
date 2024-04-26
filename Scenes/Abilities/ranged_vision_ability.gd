@@ -47,7 +47,7 @@ func moveTo():
 		var distance = entity.position.distance_to(target_location)
 		entity.velocity = direction.normalized() * speed
 		if (distance < min_range):
-			entity.velocity -= direction.normalized() * speed * 0.50
+			entity.velocity = direction.normalized() * speed * -0.50
 		
 		if (distance > min_range + 1 || distance < min_range -1 ):
 			entity.move_and_slide()	

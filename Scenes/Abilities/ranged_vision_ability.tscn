@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://d12f75jn3emcj"]
+[gd_scene load_steps=3 format=3 uid="uid://cjabmc2chtxv7"]
 
 [ext_resource type="Script" path="res://Scenes/Abilities/ranged_vision_ability.gd" id="1_wnmxv"]
 

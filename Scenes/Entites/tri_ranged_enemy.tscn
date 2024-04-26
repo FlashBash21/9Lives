@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cehdsvkrfeflk"]
+[gd_scene load_steps=3 format=3 uid="uid://wek1xyw6tna5"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/tri_ranged_enemy.gd" id="1_xirxf"]
 
