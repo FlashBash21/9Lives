@@ -3,19 +3,20 @@
 [ext_resource type="Script" path="res://Scripts/Entities/player.gd" id="1_mqpro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ouw1c"]
-size = Vector2(40, 40)
+size = Vector2(25, 25)
 
 [node name="Player" type="CharacterBody2D"]
-collision_mask = 8
+collision_mask = 10
 script = ExtResource("1_mqpro")
 
 [node name="Sprite" type="ColorRect" parent="."]
 offset_left = -19.0
 offset_top = -20.0
-offset_right = 21.0
-offset_bottom = 20.0
+offset_right = 6.0
+offset_bottom = 5.0
 color = Color(0, 0, 1, 1)
 
 [node name="Hurtbox" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(-6.5, -7.5)
 shape = SubResource("RectangleShape2D_ouw1c")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

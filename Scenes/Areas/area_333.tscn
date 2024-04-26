@@ -1,36 +1,72 @@
-[gd_scene load_steps=4 format=3 uid="uid://cam4p22k07ftw"]
+[gd_scene load_steps=8 format=3 uid="uid://cam4p22k07ftw"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_333.gd" id="1_51tbu"]
+[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/background.webp" id="2_14cet"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_hmhom"]
-[ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="3_iwram"]
+[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/floor.webp" id="3_pxyti"]
+[ext_resource type="PackedScene" uid="uid://dxxfw23v663bq" path="res://Scenes/Areas/Area Objects/area_wall_vertical.tscn" id="4_ud88x"]
+[ext_resource type="PackedScene" uid="uid://bvn0pje1wfi56" path="res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn" id="5_q2b2v"]
+[ext_resource type="PackedScene" uid="uid://b37ir2s82yo62" path="res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn" id="6_4pkof"]
 
 [node name="Area 333" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_51tbu")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 518.0
-offset_top = 163.0
-offset_right = 643.0
-offset_bottom = 434.0
-color = Color(0, 0.705882, 0.741176, 1)
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(998, 554)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_14cet")
 
-[node name="AreaDoor" parent="." instance=ExtResource("2_hmhom")]
-position = Vector2(1132, 325)
-Area = 33
+[node name="Background2" type="Sprite2D" parent="Background"]
+position = Vector2(-900, 2.08165e-12)
+texture = ExtResource("2_14cet")
 
-[node name="AreaWall" parent="." instance=ExtResource("3_iwram")]
-position = Vector2(1, 313)
-scale = Vector2(1, 33.0425)
+[node name="Background5" type="Sprite2D" parent="Background"]
+position = Vector2(-900, 600)
+texture = ExtResource("2_14cet")
 
-[node name="AreaWall2" parent="." instance=ExtResource("3_iwram")]
-position = Vector2(1150, 324)
-scale = Vector2(1, 33.0425)
+[node name="Background8" type="Sprite2D" parent="Background"]
+position = Vector2(2.08165e-12, 600)
+texture = ExtResource("2_14cet")
 
-[node name="AreaWall3" parent="." instance=ExtResource("3_iwram")]
-position = Vector2(577, 643)
-scale = Vector2(58.56, 1.00254)
+[node name="Background6" type="Sprite2D" parent="Background"]
+position = Vector2(-900, 1200)
+texture = ExtResource("2_14cet")
 
-[node name="AreaWall4" parent="." instance=ExtResource("3_iwram")]
-position = Vector2(566, 3)
-scale = Vector2(58.56, 1.00254)
+[node name="Background7" type="Sprite2D" parent="Background"]
+position = Vector2(2.08165e-12, 1200)
+texture = ExtResource("2_14cet")
+
+[node name="Background3" type="Sprite2D" parent="Background"]
+position = Vector2(-900, 1800)
+texture = ExtResource("2_14cet")
+
+[node name="Background4" type="Sprite2D" parent="Background"]
+position = Vector2(2.08165e-12, 1800)
+texture = ExtResource("2_14cet")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 330)
+texture = ExtResource("3_pxyti")
+
+[node name="AreaWall2" parent="." instance=ExtResource("4_ud88x")]
+position = Vector2(112, 330)
+
+[node name="AreaWall4" parent="AreaWall2" instance=ExtResource("5_q2b2v")]
+position = Vector2(930, 0)
+scale = Vector2(1, 1)
+
+[node name="AreaWall" parent="AreaWall2" instance=ExtResource("6_4pkof")]
+position = Vector2(466, -315)
+scale = Vector2(1, 1)
+
+[node name="AreaWall3" parent="AreaWall2" instance=ExtResource("6_4pkof")]
+position = Vector2(466, 310)
+scale = Vector2(1, 1)
+
+[node name="Right Room" parent="." instance=ExtResource("2_hmhom")]
+position = Vector2(1030, 330)
+rotation = -3.14159
+scale = Vector2(0.933028, 0.997716)
+Area = 3

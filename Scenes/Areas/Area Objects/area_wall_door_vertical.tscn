@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvn0pje1wfi56"]
+
+[ext_resource type="Texture2D" uid="uid://c7pfuubpgsqv6" path="res://Assets/wall_horizontal.webp" id="1_yma4o"]
+
+[sub_resource type="GDScript" id="GDScript_ywb57"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpwyh"]
+size = Vector2(34, 296.26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_280w8"]
+size = Vector2(32, 295.25)
+
+[node name="AreaWall" type="Node2D"]
+scale = Vector2(1, 1.00254)
+script = SubResource("GDScript_ywb57")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 0
+visibility_layer = 8
+rotation = 1.5708
+texture = ExtResource("1_yma4o")
+region_enabled = true
+region_rect = Rect2(150.497, 0, 660.359, 30)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 179.039)
+shape = SubResource("RectangleShape2D_rpwyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -179.544)
+shape = SubResource("RectangleShape2D_280w8")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
