@@ -93,7 +93,7 @@ func nextAction() -> void:
 		$AnimationPlayer.queue("Lunge")
 		actionCount = 0
 	elif distance < 300:
-		$AnimationPlayer.queue("Punch")
+		$AnimationPlayer.queue(["PunchR","PunchL"][randi() % 2])
 		actionCount += 1
 	else:
 		$AnimationPlayer.queue("Slam")
@@ -186,3 +186,5 @@ func apply_damage(amount: int) -> void:
 		print("a winner is you")
 		self.queue_free()
 		health_bar.queue_free()
+		for bullet in projectiles:
+			(bullet["projectile"] as CharacterBody2D).queue_free()

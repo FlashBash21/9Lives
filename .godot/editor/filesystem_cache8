@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714090713
+::res://::1714094134
 icon.svg::CompressedTexture2D::243468517192347284::1712936171::1712936171::1::::<><>::
 package-lock.json::JSON::-1::1712936171::0::1::::<><>::
 tri_ranged_enemy.gd::GDScript::-1::1713835626::0::1::::<>Entity<>::
 ::res://Scenes/::1713014765
-::res://Scenes/Abilities/::1713835626
+::res://Scenes/Abilities/::1714091284
 basic_projectile_ability.tscn::PackedScene::5715023813353599::1712936171::0::1::::<><>::res://Scripts/Abilities/basic_projectile_ability.gd
 dash_ability.tscn::PackedScene::8068260279664205567::1713489495::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
-healthBar_ability.tscn::PackedScene::8965213512035903371::1713835626::0::1::::<><>::res://Scripts/Abilities/healthBar_ability.gd
+healthBar_ability.tscn::PackedScene::8965213512035903371::1714091284::0::1::::<><>::res://Scripts/Abilities/healthBar_ability.gd
 melee_ability.tscn::PackedScene::3262596212621646329::1713835626::0::1::::<><>::res://Scripts/Abilities/melee_ability.gd
 move_ability.tscn::PackedScene::3988790515073486677::1713489495::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
 print_ability.tscn::PackedScene::2893082318069768461::1712936171::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
@@ -18,10 +18,10 @@ tri_shot_projectile_ability.tscn::PackedScene::4080360949998065812::1713835626::
 vision_ability.tscn::PackedScene::7749801754128912209::1713489152::0::1::::<><>::res://Scripts/Abilities/vision_ability.gd
 ::res://Scenes/Abilities/Boss/::1713485819
 healthBar_ability.tscn::PackedScene::4088279440248474568::1713485819::0::1::::<><>::res://Scripts/Abilities/Boss/healthBar_ability.gd
-::res://Scenes/Areas/::1713973852
+::res://Scenes/Areas/::1714090996
 AreaMover.gd::GDScript::-1::1712936171::0::1::::<>Area2D<>::
 area_0.tscn::PackedScene::3290003732337889625::1713830727::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
-area_1.tscn::PackedScene::2755502406907540447::1713973852::0::1::::<><>::res://Scripts/Areas/area_1.gd<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
+area_1.tscn::PackedScene::2755502406907540447::1714090996::0::1::::<><>::res://Scripts/Areas/area_1.gd<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
 area_2.tscn::PackedScene::4486327128723510664::1713835626::0::1::::<><>::res://Scripts/Areas/area_2.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
 area_3.tscn::PackedScene::2199737001426849287::1713835626::0::1::::<><>::res://Scripts/Areas/area_3.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn<>uid://ctnqeooju8vil::::res://Scenes/Entites/test_enemy.tscn
 area_4.tscn::PackedScene::4099741977014501814::1713835626::0::1::::<><>::res://Scripts/Areas/area_4.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
@@ -32,27 +32,27 @@ area_100.tscn::PackedScene::5973801986661292110::1713489149::0::1::::<><>::res:/
 area_222.tscn::PackedScene::5647757259579388543::1713835626::0::1::::<><>::res://Scripts/Areas/area_222.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
 area_333.tscn::PackedScene::4799402940462920256::1713835626::0::1::::<><>::res://Scripts/Areas/area_333.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
 area_444.tscn::PackedScene::8678922318126612808::1713835626::0::1::::<><>::res://Scripts/Areas/area_444.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall.tscn
-world_manager.tscn::PackedScene::7332831277350975130::1713489997::0::1::::<><>::res://Scripts/Areas/world_manager.gd
+world_manager.tscn::PackedScene::7332831277350975130::1714090996::0::1::::<><>::res://Scripts/Areas/world_manager.gd
 ::res://Scenes/Areas/Area Objects/::1713831476
 area_door.tscn::PackedScene::3780403116402693299::1713831468::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd
 area_wall.tscn::PackedScene::5629488044770519094::1713831476::0::1::::<><>::
-::res://Scenes/Entites/::1713973921
-boss.tscn::PackedScene::5110789450181827039::1713973883::0::1::::<><>::res://Scripts/Entities/boss.gd
-boss_enemy.tscn::PackedScene::8207372199388983952::1713489997::0::1::::<><>::res://Scripts/Entities/boss_enemy.gd
+::res://Scenes/Entites/::1714094019
+boss.tscn::PackedScene::5110789450181827039::1714094019::0::1::::<><>::res://Scripts/Entities/boss.gd
 dodge_enemy.tscn::PackedScene::4659636474682090380::1713835626::0::1::::<><>::res://Scripts/Entities/dodge_enemy.gd
-player.tscn::PackedScene::3383834446001041586::1713973883::0::1::::<><>::res://Scripts/Entities/player.gd
+player.tscn::PackedScene::3383834446001041586::1714091284::0::1::::<><>::res://Scripts/Entities/player.gd
 ranged_enemy.tscn::PackedScene::6110329001329467068::1713973921::0::1::::<><>::res://Scripts/Entities/ranged_enemy.gd
 test_enemy.tscn::PackedScene::6134245679762608471::1713835626::0::1::::<><>::res://Scripts/Entities/test_enemy.gd
 tri_ranged_enemy.tscn::PackedScene::5068262800702982052::1713973921::0::1::::<><>::res://Scripts/Entities/tri_ranged_enemy.gd
-::res://Scenes/Objects/::1713835626
+::res://Scenes/Objects/::1714094019
 basic_projectile_object.tscn::PackedScene::8188254738857146271::1713835626::0::1::::<><>::
+delayed_explosion.tscn::PackedScene::8528030046193875055::1714094019::0::1::::<><>::res://Scripts/Objects/delayed_explosion.gd
 heart.tscn::PackedScene::3715667563862296726::1713835626::0::1::::<><>::
-::res://Scripts/::1712936171
-::res://Scripts/Abilities/::1713973921
+::res://Scripts/::1714091843
+::res://Scripts/Abilities/::1714091261
 Ability.gd::GDScript::-1::1713489149::0::1::::Ability<>Node2D<>::
 basic_projectile_ability.gd::GDScript::-1::1713835626::0::1::::<>Projectile<>::
 dash_ability.gd::GDScript::-1::1713835626::0::1::::<>Ability<>::
-healthBar_ability.gd::GDScript::-1::1713835626::0::1::::<>Ability<>::
+healthBar_ability.gd::GDScript::-1::1714091261::0::1::::<>Ability<>::
 melee_ability.gd::GDScript::-1::1713835626::0::1::::<>Ability<>::
 move_ability.gd::GDScript::-1::1713489149::0::1::::<>Ability<>::
 print_ability.gd::GDScript::-1::1712936171::0::1::::<>Ability<>::
@@ -62,8 +62,8 @@ tri_shot_projectile_ability.gd::GDScript::-1::1713973921::0::1::::<>Projectile<>
 vision_ability.gd::GDScript::-1::1713835626::0::1::::<>Ability<>::
 ::res://Scripts/Abilities/Boss/::1713485819
 healthBar_ability.gd::GDScript::-1::1713485819::0::1::::<>Ability<>::
-::res://Scripts/Areas/::1713973921
-area_0.gd::GDScript::-1::1713489149::0::1::::<>BaseArea<>::
+::res://Scripts/Areas/::1714090995
+area_0.gd::GDScript::-1::1714090995::0::1::::<>BaseArea<>::
 area_1.gd::GDScript::-1::1713973852::0::1::::<>BaseArea<>::
 area_2.gd::GDScript::-1::1713835626::0::1::::<>BaseArea<>::
 area_3.gd::GDScript::-1::1713835626::0::1::::<>BaseArea<>::
@@ -80,13 +80,15 @@ world_manager.gd::GDScript::-1::1713489149::0::1::::WorldManager<>Node2D<>::
 ::res://Scripts/Areas/Area Objects/::1713485812
 area_door.gd::GDScript::-1::1713485451::0::1::::AreaDoor<>Area2D<>::
 area_wall.gd::GDScript::-1::1713485812::0::1::::<>Node<>::
-::res://Scripts/Entities/::1713973921
-boss.gd::GDScript::-1::1713973382::0::1::::<>Entity<>::
-boss_enemy.gd::GDScript::-1::1713489149::0::1::::<>Entity<>::
+::res://Scripts/Entities/::1714094016
+boss.gd::GDScript::-1::1714094016::0::1::::<>Entity<>::
 dodge_enemy.gd::GDScript::-1::1713835626::0::1::::<>Entity<>::
 enemies.tscn::PackedScene::4875209753166722958::1712936171::0::1::::<><>::
 entity.gd::GDScript::-1::1713014412::0::1::::Entity<>CharacterBody2D<>::
-player.gd::GDScript::-1::1713974084::0::1::::Player<>Entity<>::
+player.gd::GDScript::-1::1714091358::0::1::::Player<>Entity<>::
 ranged_enemy.gd::GDScript::-1::1713973921::0::1::::<>Entity<>::
-test_enemy.gd::GDScript::-1::1713973852::0::1::::<>Entity<>::
+test_enemy.gd::GDScript::-1::1714090728::0::1::::<>Entity<>::
 tri_ranged_enemy.gd::GDScript::-1::1713973921::0::1::::<>Entity<>::
+::res://Scripts/Objects/::1714093802
+delayed_explosion.gd::GDScript::-1::1714093802::0::1::::<>SceneObject<>::
+scene_object.gd::GDScript::-1::1714093429::0::1::::SceneObject<>Node2D<>::

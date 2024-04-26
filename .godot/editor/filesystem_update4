@@ -1,13 +1,4 @@
 res://Scenes/Areas/world_manager.tscn
 res://Scripts/Entities/test_enemy.gd
-res://Scenes/Areas/area_1.tscn
 res://Scenes/Entites/boss.tscn
-res://Scripts/Areas/area_0.gd
-res://Scripts/Abilities/healthBar_ability.gd
-res://Scenes/Abilities/healthBar_ability.tscn
-res://Scenes/Entites/player.tscn
-res://Scripts/Entities/player.gd
-res://Scenes/Objects/delayed_explosion.tscn
-res://Scripts/Objects/delayed_explosion.gd
 res://Scripts/Entities/boss.gd
-res://Scripts/Objects/scene_object.gd
