@@ -1,6 +1,7 @@
 extends Entity
 
 var basic_projectile_object = load("res://Scenes/Objects/basic_projectile_object.tscn")
+var explosion_object = load("res://Scenes/Objects/delayed_explosion.tscn")
 
 var health_bar : Ability
 
@@ -10,6 +11,7 @@ var screenHeight = 648
 var focused_entity : Entity
 var recent_hits := []
 var tracking: float = 90 * PI / 180
+var healthRate: float = 1
 
 var projectiles := []
 
@@ -72,6 +74,7 @@ func _physics_process(delta: float) -> void:
 
 func nextAction() -> void:
 	find_enemies_to_focus()
+	healthRate = 1
 	noAction = !focused_entity
 	if (noAction): return
 	
@@ -79,7 +82,8 @@ func nextAction() -> void:
 	
 	if (hp < 100):
 		if (zoneCount >= 5):
-			$AnimationPlayer.queue("Zone_1")
+			$AnimationPlayer.queue("Zone_3")
+			actionCount = 2
 			zoneCount = 0
 			return
 		else:
@@ -100,6 +104,9 @@ func setTracking(value: float) -> void:
 
 func setSpeed(value: float) -> void:
 	speed = value
+
+func setHealthRate(value: float) -> void:
+	healthRate = value
 
 func clear_recent_hits() -> void:
 	recent_hits = []
@@ -140,20 +147,20 @@ func fire(move: int) -> void:
 		1:
 			for i in range(9):
 				fireProjectile(Vector2(screenWidth * (i+1) / 10., 50), PI/2, 300)
-			pass
 		2:
 			pass
 		3:
-			pass
+			for i in range(30):
+				var explosion = explosion_object.instantiate() as SceneObject
+				addToArea(explosion)
+				explosion.position = Vector2(screenWidth * randf_range(0,1), screenHeight * randf_range(0,1))
+				explosion.initialize({"time": 3 + i / 10.})
 
 func fireProjectile(pos: Vector2, angle: float, speed: float) -> void:
 	var projectile = basic_projectile_object.instantiate()
 	projectile.add_collision_exception_with(self)
 
-	var area = get_tree().get_first_node_in_group("Area")
-	if (!area): 
-		area = get_node("/root")
-	area.add_child(projectile)
+	addToArea(projectile)
 	
 	projectile.rotation = angle
 	projectile.position = pos
@@ -165,8 +172,14 @@ func fireProjectile(pos: Vector2, angle: float, speed: float) -> void:
 		"time": 0
 		})
 
+func addToArea(obj: Node) -> void:
+	var area = get_tree().get_first_node_in_group("Area")
+	if (!area): 
+		area = get_node("/root")
+	area.add_child(obj)
+
 func apply_damage(amount: int) -> void:
-	hp = hp - amount
+	hp = hp - amount * healthRate
 	health_bar.execute({"entity" = self, "max" = 200})
 	
 	if hp <= 0 : 

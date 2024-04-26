@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ce2x7qu5jneep"]
+[gd_scene load_steps=14 format=3 uid="uid://ce2x7qu5jneep"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/boss.gd" id="1_luuug"]
 
@@ -476,6 +476,117 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_dpmqt"]
+resource_name = "Zone_2"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/RHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, 64), Vector2(56, 16), Vector2(56, 16), Vector2(96, 16), Vector2(96, 16), Vector2(40, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/LHand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, -64), Vector2(56, -16), Vector2(56, -16), Vector2(96, -16), Vector2(96, -16), Vector2(40, -64)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [180.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [2],
+"method": &"fire"
+}, {
+"args": [90.0],
+"method": &"setTracking"
+}, {
+"args": [],
+"method": &"nextAction"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_dytpd"]
+resource_name = "Zone_3"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/RHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, 64), Vector2(56, 16), Vector2(56, 16), Vector2(96, 16), Vector2(96, 16), Vector2(40, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/LHand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, -64), Vector2(56, -16), Vector2(56, -16), Vector2(96, -16), Vector2(96, -16), Vector2(40, -64)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.4, 1.6, 1.8, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [180.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [3],
+"method": &"fire"
+}, {
+"args": [90.0],
+"method": &"setTracking"
+}, {
+"args": [0.5],
+"method": &"setHealthRate"
+}, {
+"args": [],
+"method": &"nextAction"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_krbm3"]
 _data = {
 "Jump": SubResource("Animation_5emxn"),
@@ -483,7 +594,9 @@ _data = {
 "Punch": SubResource("Animation_7e4ln"),
 "RESET": SubResource("Animation_tkyo3"),
 "Slam": SubResource("Animation_86k53"),
-"Zone_1": SubResource("Animation_c1blp")
+"Zone_1": SubResource("Animation_c1blp"),
+"Zone_2": SubResource("Animation_dpmqt"),
+"Zone_3": SubResource("Animation_dytpd")
 }
 
 [node name="Boss" type="CharacterBody2D"]
