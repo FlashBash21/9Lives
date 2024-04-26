@@ -1,8 +1,6 @@
 extends Entity
 
 
-
-var punch_ability : Ability
 var ranged_vision_ability := load_ability("ranged_vision")
 var dash_ability := load_ability("dash")
 var melee_ability := load_ability("melee")
@@ -16,13 +14,10 @@ func _ready():
 	
 	self.speed = 100
 	dash_time.start()
-	punch_ability = load_ability("punch")
+	dash_ability.level_up()
 	self.hp = 15
 	add_to_group("Enemy")
-	punch_ability.execute({"entity" = self, 
-					"attack_rate" = .5,
-					"damage" = 5, 
-					"effectors" = ["Player"]})
+	
 	
 	ranged_vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],
@@ -44,7 +39,7 @@ func _physics_process(delta: float) -> void:
 								"at" = distance,
 								"cooldown" = 1,
 								"attack_rate" = 1,
-								"range" = -100.00,
+								"range" = -90.00,
 								"effectors" = ["Player"]})
 
 
@@ -60,11 +55,15 @@ func apply_damage(ammount: int) -> void:
 
 func _dodge():
 	var i = 1
+	
 	if (randi_range(0,1) == 0):
 		i = -1
-	var rotate_dir = deg_to_rad(randi_range(45,90)) * i
-	var direction = self.velocity.normalized().rotated(rotate_dir)
+	randomize()
+	var rotate_dir = deg_to_rad(randi_range(0,360))
+	var direction = self.velocity.rotated(rotate_dir)
 	self.velocity = direction.normalized() * speed
-	dash_ability.execute({"entity" = self, "speed" = self.speed*10, "duration" = 0.1})
+	if (!dash_ability.is_dashing() and self.velocity != Vector2.ZERO):
+		print("dash")
+		dash_ability.execute({"entity" = self, "speed" = self.speed*3, "duration" = 0.4})
 	dash_time.start()
-	print("dash")
+	

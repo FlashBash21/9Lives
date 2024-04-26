@@ -23,6 +23,7 @@ func _physics_process(delta):
 	if is_dashing():
 		entity.velocity = dir * level * (speed) 
 		entity.move_and_slide()
+		#print("REAL DASH")
 
 func is_dashing() -> bool:
 	return !dash_timer.is_stopped()

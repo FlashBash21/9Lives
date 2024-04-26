@@ -1,11 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfi1ysx04scl8"]
 
-[ext_resource type="Script" path="res://Scripts/Areas/area_1.gd" id="1_bpvbr"]
+[ext_resource type="Script" path="res://Scripts/Areas/area_100.gd" id="1_ds1xa"]
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall.tscn" id="2_yyhqo"]
 
 [node name="area_1" type="Node2D"]
-process_mode = 1
-script = ExtResource("1_bpvbr")
+script = ExtResource("1_ds1xa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 518.0
+offset_top = 163.0
+offset_right = 643.0
+offset_bottom = 434.0
+color = Color(1, 0, 1, 1)
 
 [node name="AreaWall" parent="." instance=ExtResource("2_yyhqo")]
 position = Vector2(3.00002, 325)

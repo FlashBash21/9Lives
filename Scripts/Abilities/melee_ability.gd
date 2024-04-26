@@ -24,7 +24,6 @@ func execute(args: Dictionary) -> void:
 	effector_groups = effectors
 	
 	if not attack_player.is_playing() and local_cooldown <= 0:
-		#entity.add_child(self)
 		local_cooldown = cd
 		position = Vector2.ZERO
 		var dir := (at - to_global(position)).normalized()
@@ -40,6 +39,7 @@ func _process(delta):
 
 func _on_attack_player_animation_finished(anim_name):
 	local_cooldown = cd
+	
 
 
 func hit_entities_in_range() -> void:
