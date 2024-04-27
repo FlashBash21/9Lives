@@ -19,4 +19,3 @@ color = Color(0, 0, 1, 1)
 [node name="Hurtbox" type="CollisionShape2D" parent="."]
 position = Vector2(-6.5, -7.5)
 shape = SubResource("RectangleShape2D_ouw1c")
-debug_color = Color(0, 0.6, 0.701961, 0.419608)

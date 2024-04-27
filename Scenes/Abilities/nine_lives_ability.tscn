@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccquaff1ootwr"]
+
+[ext_resource type="Script" path="res://Scripts/Abilities/nine_lives_ability.gd" id="1_c2426"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_88r80"]
+font_size = 80
+font_color = Color(0.584314, 0, 0.0666667, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="NineLivesAbility" type="Node2D"]
+script = ExtResource("1_c2426")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 50.0
+offset_bottom = 90.0
+label_settings = SubResource("LabelSettings_88r80")

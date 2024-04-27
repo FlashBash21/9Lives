@@ -7,7 +7,9 @@ var dash_ability := load_ability("dash")
 var basic_projectile_ability := load_ability("basic_projectile")
 var melee_ability := load_ability("melee")
 var health_bar : Ability
+var lives : Ability
 var maxhealth = 2
+var nineLives = 1
 
 var tri_shot_ability := load_ability("tri_shot_projectile")
 
@@ -19,11 +21,18 @@ func _ready() -> void:
 	self.position = Vector2(575,325)
 	
 	health_bar = load_ability("healthBar")
-	var freeNode = Node.new()
-	add_child(freeNode)
-	health_bar.reparent(freeNode)
+	var healthNode = Node.new()
+	add_child(healthNode)
+	health_bar.reparent(healthNode)
 	health_bar.global_position = Vector2(30, 30)
 	health_bar.execute({"hp": hp})
+	
+	lives = load_ability("nine_lives")
+	var lifeNode = Node.new()
+	add_child(lifeNode)
+	lives.reparent(lifeNode)
+	lives.global_position = Vector2(1075, 5)
+	lives.execute({"life": nineLives})
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -86,3 +95,12 @@ func handle_death() -> void:
 	self.hp = maxhealth
 	health_bar.execute({"hp": hp})
 	self.position = Vector2(575,325)
+	nineLives -= 1
+	lives.execute(({"life" : nineLives}))
+	if nineLives <= 0:
+		handle_perma_death()
+		
+func handle_perma_death() -> void:
+	self.queue_free()
+	health_bar.queue_free()
+	get_tree().change_scene_to_file("res://Scenes/LoseScreen.tscn")
