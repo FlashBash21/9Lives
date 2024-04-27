@@ -21,5 +21,6 @@ func _process(delta) -> void:
 			push_error("Door is not a child of a BaseArea node")
 			return
 		if (body):
-			body.position = get_viewport().get_size() - Vector2i(body.position)
+			body.position = get_viewport().get_visible_rect().size - body.position
+			print(body.position)
 		parent.query_area_load.emit(Area)
