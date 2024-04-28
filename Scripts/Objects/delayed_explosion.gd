@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 			$Timer.wait_time = 0.2
 			$Timer.start()
 			phase = 2
+			$Sprite2D.modulate.a = 1
 	if (phase == 2):
 		if ($Timer.is_stopped()):
 			self.queue_free()

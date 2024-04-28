@@ -5,8 +5,6 @@ var current_area = 0
 var area_ref: BaseArea
 var player_ref: Entity #constantly hold onto a player reference. we can insert and remove this from child scenes while retaining player information
 
-var paused = false
-
 func _ready() -> void:
 	var player = load("res://Scenes/Entites/player.tscn")
 	player_ref = player.instantiate()
@@ -16,10 +14,6 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("ui_accept")):
 		#load_area(1)
 		pass
-	if (Input.is_action_just_pressed("ui_cancel")):
-		paused = !paused
-		get_tree().paused = paused
-		$PauseScreen.visible = paused
 
 #automatically unloads current area and connects to its area query signal
 func load_area(area_num: int) -> void:

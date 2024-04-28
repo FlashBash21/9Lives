@@ -17,7 +17,9 @@ var projectiles := []
 
 var noAction = true
 var actionCount = 0
-var zoneCount = 5
+var zoneCount = 0
+var nextHand = -1
+var phase:int
 
 func _ready():
 	self.hp = 200
@@ -31,6 +33,7 @@ func _ready():
 	
 	focused_entity = null
 	speed = 0
+	phase = 1
 
 func _process(delta: float) -> void:
 	if (noAction): nextAction()
@@ -78,22 +81,38 @@ func nextAction() -> void:
 	noAction = !focused_entity
 	if (noAction): return
 	
+	if (actionCount < 0):
+		print("Queue: ",-actionCount)
+		actionCount += 1
+		return
+	
 	var distance = position.distance_to(focused_entity.position)
 	
-	if (hp < 100):
+	if (hp < 120 and phase == 1):
+		phase = 2
+		zoneCount = 5
+	
+	if (phase == 2):
 		if (zoneCount >= 5):
 			$AnimationPlayer.queue("Zone_3")
-			actionCount = 2
+			$AnimationPlayer.queue("Lunge2")
+			actionCount = -1
 			zoneCount = 0
+			nextHand = -1
 			return
 		else:
 			zoneCount += 1
 	
 	if (actionCount >= 2):
-		$AnimationPlayer.queue("Lunge")
+		$AnimationPlayer.queue("Lunge2" if phase == 2 else "Lunge")
 		actionCount = 0
+		nextHand = -1
 	elif distance < 300:
-		$AnimationPlayer.queue(["PunchR","PunchL"][randi() % 2])
+		if nextHand < 0:
+			nextHand = randi() % 2
+			$AnimationPlayer.queue(["PunchR","PunchL"][1-nextHand])
+		else:
+			$AnimationPlayer.queue(["PunchR","PunchL"][nextHand])
 		actionCount += 1
 	else:
 		$AnimationPlayer.queue("Slam")
