@@ -10,7 +10,7 @@ var once = true
 func _ready():
 	self.hp = 5
 	add_to_group("Enemy")
-	
+	tri_projectile_ability.level_up()
 	
 	vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],

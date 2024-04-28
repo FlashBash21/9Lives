@@ -21,7 +21,7 @@ func execute(args: Dictionary) -> void:
 func _physics_process(delta):
 	local_cooldown+=delta
 	if is_dashing():
-		entity.velocity = dir * level * (speed) 
+		entity.velocity = dir * ((level+1)/2) * (speed) 
 		entity.move_and_slide()
 		#print("REAL DASH")
 

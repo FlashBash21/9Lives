@@ -16,7 +16,7 @@ func _ready():
 	self.speed = 100
 	self.hp = 15
 	add_to_group("Enemy")
-	
+	melee_ability.level_up()
 	
 	ranged_vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],

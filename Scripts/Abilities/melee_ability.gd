@@ -24,8 +24,10 @@ func execute(args: Dictionary) -> void:
 	range = args["range"] as float
 	damage = args["damage"] as int
 	
+	damage += (2*(level-1))
 	effector_groups = effectors
 	
+	if level <=0: return
 	if not attack_player.is_playing() and local_cooldown <= 0:
 		local_cooldown = cd
 		look_at(at)
