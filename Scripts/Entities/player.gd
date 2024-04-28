@@ -8,8 +8,8 @@ var basic_projectile_ability := load_ability("basic_projectile")
 var melee_ability := load_ability("melee")
 var health_bar : Ability
 var lives : Ability
-var maxhealth = 2
-var nineLives = 1
+var maxhealth = 100
+var nineLives = 9
 
 var tri_shot_ability := load_ability("tri_shot_projectile")
 
@@ -65,7 +65,7 @@ func _physics_process(delta: float) -> void:
 														"at" = get_global_mouse_position(),
 														"cooldown" = 0.25,
 														"attack_rate" = 1,
-														"range" = 100.00,
+														"range" = 10.00,
 														"effectors" = ["Enemy"]})
 
 func apply_damage(amount: int) -> void:

@@ -3,15 +3,17 @@ extends Ability
 @onready var attack_player = $AttackPlayer
 @onready var sprite = $ColorRect
 @onready var collision_area = $ColorRect/Area2D
+@onready var attack_animation = $AnimatedSprite2D
 
 var effector_groups := []
 var recent_hits := []
 var speed_multi := 1.0
-var range := 100.0
+var range := 10.0
 var cd : float
 
 func _ready():
 	sprite.visible = false
+	attack_animation.visible = false
 
 func execute(args: Dictionary) -> void:
 	var entity := args["entity"] as Entity
@@ -31,6 +33,9 @@ func execute(args: Dictionary) -> void:
 		position = dir * range
 		attack_player.speed_scale = attack_multi
 		attack_player.play("attack", -1, 1)
+		attack_animation.visible = true
+		attack_animation.play()
+		
 
 func _process(delta):
 	local_cooldown -= delta
@@ -38,6 +43,8 @@ func _process(delta):
 
 
 func _on_attack_player_animation_finished(anim_name):
+	attack_animation.stop()
+	attack_animation.visible = false
 	local_cooldown = cd
 	
 
