@@ -20,7 +20,7 @@ var actionCount = 0
 var zoneCount = 5
 
 func _ready():
-	self.hp = 200
+	self.hp = 400
 	add_to_group("Enemy")
 	
 	health_bar = load_ability("Boss/healthBar")
@@ -80,7 +80,7 @@ func nextAction() -> void:
 	
 	var distance = position.distance_to(focused_entity.position)
 	
-	if (hp < 100):
+	if (hp < 200):
 		if (zoneCount >= 5):
 			$AnimationPlayer.queue("Zone_3")
 			actionCount = 2
@@ -180,7 +180,7 @@ func addToArea(obj: Node) -> void:
 
 func apply_damage(amount: int) -> void:
 	hp = hp - amount * healthRate
-	health_bar.execute({"entity" = self, "max" = 200})
+	health_bar.execute({"entity" = self, "max" = 400})
 	
 	if hp <= 0 :
 		self.queue_free()

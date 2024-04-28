@@ -16,6 +16,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="ColorRect" type="ColorRect" parent="PauseScreen"]
+layout_mode = 0
 offset_left = -33.0
 offset_top = -32.0
 offset_right = 1189.0

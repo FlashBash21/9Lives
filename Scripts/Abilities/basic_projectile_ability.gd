@@ -15,6 +15,9 @@ func execute(args: Dictionary) -> void:
 	var damage = args["damage"] as int
 	var effectors = args["effectors"] as Array[StringName]
 	
+	damage += (level-1)
+	speed = speed + (speed * .1 * level)
+	
 	effector_groups = effectors
 	add_effector_group(effector_groups[0])
 	

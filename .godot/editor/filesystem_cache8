@@ -1,112 +1,153 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714267691
-icon.svg::CompressedTexture2D::243468517192347284::1706859391::1706859391::1::::<><>::
-package-lock.json::JSON::-1::1708020428::0::1::::<><>::
-tri_ranged_enemy.gd::GDScript::-1::1714249143::0::1::::<>Entity<>::
-::res://Assets/::1714267635
-background.webp::CompressedTexture2D::5537721266095350588::1714267635::1714267635::1::::<><>::
-door.webp::CompressedTexture2D::4497380228894971499::1714267635::1714267635::1::::<><>::
-floor.webp::CompressedTexture2D::2290067354477403281::1714267635::1714267635::1::::<><>::
-wall_horizontal.webp::CompressedTexture2D::7050190383658148665::1714267635::1714267635::1::::<><>::
-wall_vertical.webp::CompressedTexture2D::1461681409950175076::1714267635::1714267635::1::::<><>::
-::res://Resources/::1706862964
-::res://Scenes/::1714267686
-LoseScreen.tscn::PackedScene::8032926157303095357::1714267686::0::1::::<><>::res://Scripts/Objects/lose_screen.gd
-WinScreen.tscn::PackedScene::4346043668838564511::1714267635::0::1::::<><>::
-::res://Scenes/Abilities/::1714267686
-basic_projectile_ability.tscn::PackedScene::5715023813353599::1711908981::0::1::::<><>::res://Scripts/Abilities/basic_projectile_ability.gd
-dash_ability.tscn::PackedScene::8068260279664205567::1711867295::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
-healthBar_ability.tscn::PackedScene::8965213512035903371::1714267635::0::1::::<><>::res://Scripts/Abilities/healthBar_ability.gd
-melee_ability.tscn::PackedScene::3262596212621646329::1714267635::0::1::::<><>::res://Scripts/Abilities/melee_ability.gd
-move_ability.tscn::PackedScene::3988790515073486677::1712213039::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
-nine_lives_ability.tscn::PackedScene::4947463710123928089::1714267686::0::1::::<><>::res://Scripts/Abilities/nine_lives_ability.gd
-print_ability.tscn::PackedScene::2893082318069768461::1711866295::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
-punch_ability.tscn::PackedScene::744038827610002260::1713473376::0::1::::<><>::res://Scripts/Abilities/punch_ability.gd
-ranged_vision_ability.gd::GDScript::-1::1714267635::0::1::::<>Ability<>::
-ranged_vision_ability.tscn::PackedScene::5404623253505537614::1714267635::0::1::::<><>::res://Scenes/Abilities/ranged_vision_ability.gd
-tri_shot_projectile_ability.tscn::PackedScene::429379475579187406::1714267635::0::1::::<><>::res://Scripts/Abilities/tri_shot_projectile_ability.gd
-vision_ability.tscn::PackedScene::7749801754128912209::1713561881::0::1::::<><>::res://Scripts/Abilities/vision_ability.gd
-::res://Scenes/Abilities/Boss/::1713561881
-healthBar_ability.tscn::PackedScene::4088279440248474568::1713561881::0::1::::<><>::res://Scripts/Abilities/Boss/healthBar_ability.gd
-::res://Scenes/Areas/::1714267686
-AreaMover.gd::GDScript::-1::1707639970::0::1::::<>Area2D<>::
-area_0.tscn::PackedScene::3290003732337889625::1714267686::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://ct1bimecs3ce2::::res://Scenes/Areas/Area Objects/area_boss_door.tscn
-area_1.tscn::PackedScene::2755502406907540447::1714267635::0::1::::<><>::res://Scripts/Areas/area_100.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
-area_2.tscn::PackedScene::4486327128723510664::1714267635::0::1::::<><>::res://Scripts/Areas/area_2.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
-area_3.tscn::PackedScene::2199737001426849287::1714267635::0::1::::<><>::res://Scripts/Areas/area_3.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
-area_4.tscn::PackedScene::4099741977014501814::1714267635::0::1::::<><>::res://Scripts/Areas/area_4.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn
-area_22.tscn::PackedScene::3254946551199088239::1714267635::0::1::::<><>::res://Scripts/Areas/area_22.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
-area_33.tscn::PackedScene::8654538129724587943::1714267635::0::1::::<><>::res://Scripts/Areas/area_33.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn
-area_44.tscn::PackedScene::6553760304162888562::1714267635::0::1::::<><>::res://Scripts/Areas/area_44.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn
-area_100.tscn::PackedScene::5973801986661292110::1714267635::0::1::::<><>::res://Scripts/Areas/area_100.gd
-area_222.tscn::PackedScene::5647757259579388543::1714267635::0::1::::<><>::res://Scripts/Areas/area_222.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn
-area_333.tscn::PackedScene::4799402940462920256::1714267635::0::1::::<><>::res://Scripts/Areas/area_333.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
-area_444.tscn::PackedScene::8678922318126612808::1714267635::0::1::::<><>::res://Scripts/Areas/area_444.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
-world_manager.tscn::PackedScene::7332831277350975130::1714267635::0::1::::<><>::res://Scripts/Areas/world_manager.gd
-::res://Scenes/Areas/Area Objects/::1714267635
-area_boss_door.tscn::PackedScene::6160178858033824491::1714267635::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp
-area_door.tscn::PackedScene::3780403116402693299::1714267635::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp
-area_wall_door_horizontal.tscn::PackedScene::5629488044770519094::1714267635::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
-area_wall_door_vertical.tscn::PackedScene::3888768502722589443::1714267635::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
-area_wall_horizontal.tscn::PackedScene::4418285935599779585::1714267635::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
-area_wall_vertical.tscn::PackedScene::8821430477908961578::1714267635::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
-::res://Scenes/Entites/::1714267686
-boss.tscn::PackedScene::5110789450181827039::1714267686::0::1::::<><>::res://Scripts/Entities/boss.gd
-melee_dash_enemy.tscn::PackedScene::3461609298317455408::1714267635::0::1::::<><>::res://Scripts/Entities/melee_dash_enemy.gd
-melee_enemy.tscn::PackedScene::3314661936352908702::1714267635::0::1::::<><>::res://Scripts/Entities/melee_enemy.gd
-player.tscn::PackedScene::3383834446001041586::1714267686::0::1::::<><>::res://Scripts/Entities/player.gd
-ranged_enemy.tscn::PackedScene::6110329001329467068::1714267635::0::1::::<><>::res://Scripts/Entities/ranged_enemy.gd
-test_enemy.tscn::PackedScene::6134245679762608471::1714267635::0::1::::<><>::res://Scripts/Entities/test_enemy.gd
-tri_ranged_enemy.tscn::PackedScene::1553066917776270362::1714267635::0::1::::<><>::res://Scripts/Entities/tri_ranged_enemy.gd
-::res://Scenes/Objects/::1714267686
-basic_projectile_object.tscn::PackedScene::8188254738857146271::1714249143::0::1::::<><>::
-delayed_explosion.tscn::PackedScene::8528030046193875055::1714267635::0::1::::<><>::res://Scripts/Objects/delayed_explosion.gd
-heart.tscn::PackedScene::4856189829276136850::1714267686::0::1::::<><>::
-::res://Scripts/::1714267635
-::res://Scripts/Abilities/::1714267686
-Ability.gd::GDScript::-1::1713561881::0::1::::Ability<>Node2D<>::
-basic_projectile_ability.gd::GDScript::-1::1714249143::0::1::::<>Projectile<>::
-dash_ability.gd::GDScript::-1::1714267635::0::1::::<>Ability<>::
-healthBar_ability.gd::GDScript::-1::1714267635::0::1::::<>Ability<>::
-melee_ability.gd::GDScript::-1::1714267635::0::1::::<>Ability<>::
-move_ability.gd::GDScript::-1::1713561881::0::1::::<>Ability<>::
-nine_lives_ability.gd::GDScript::-1::1714267686::0::1::::<>Ability<>::
-print_ability.gd::GDScript::-1::1707515542::0::1::::<>Ability<>::
-projectile_ability.gd::GDScript::-1::1714267635::0::1::::Projectile<>Ability<>::
-punch_ability.gd::GDScript::-1::1713561881::0::1::::<>Ability<>::
-tri_shot_projectile_ability.gd::GDScript::-1::1714267635::0::1::::<>Projectile<>::
-vision_ability.gd::GDScript::-1::1714249143::0::1::::<>Ability<>::
-::res://Scripts/Abilities/Boss/::1713561881
-healthBar_ability.gd::GDScript::-1::1713561881::0::1::::<>Ability<>::
-::res://Scripts/Areas/::1714267686
-area_0.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_1.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_2.gd::GDScript::-1::1714267686::0::1::::<>BaseArea<>::
-area_3.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_4.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_22.gd::GDScript::-1::1714267686::0::1::::<>BaseArea<>::
-area_33.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_44.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_100.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_222.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_333.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-area_444.gd::GDScript::-1::1714267635::0::1::::<>BaseArea<>::
-base_area.gd::GDScript::-1::1714267635::0::1::::BaseArea<>Node2D<>::
-world_manager.gd::GDScript::-1::1714267635::0::1::::WorldManager<>Node2D<>::
-::res://Scripts/Areas/Area Objects/::1714267686
-area_door.gd::GDScript::-1::1714267686::0::1::::AreaDoor<>Area2D<>::
-area_wall.gd::GDScript::-1::1713561881::0::1::::<>Node<>::
-::res://Scripts/Entities/::1714267686
-boss.gd::GDScript::-1::1714267635::0::1::::<>Entity<>::
-enemies.tscn::PackedScene::4875209753166722958::1711865323::0::1::::<><>::
-entity.gd::GDScript::-1::1713473376::0::1::::Entity<>CharacterBody2D<>::
-melee_dash_enemy.gd::GDScript::-1::1714267635::0::1::::<>Entity<>::
-melee_enemy.gd::GDScript::-1::1714267635::0::1::::<>Entity<>::
-player.gd::GDScript::-1::1714267686::0::1::::Player<>Entity<>::
-ranged_enemy.gd::GDScript::-1::1714267635::0::1::::<>Entity<>::
-test_enemy.gd::GDScript::-1::1714250669::0::1::::<>Entity<>::
-tri_ranged_enemy.gd::GDScript::-1::1714267635::0::1::::<>Entity<>::
-::res://Scripts/Objects/::1714267686
-delayed_explosion.gd::GDScript::-1::1714267635::0::1::::<>SceneObject<>::
-lose_screen.gd::GDScript::-1::1714267686::0::1::::<>Node<>::
-scene_object.gd::GDScript::-1::1714267635::0::1::::SceneObject<>Node2D<>::
+::res://::1714323627
+icon.svg::CompressedTexture2D::243468517192347284::1707658895::1707658895::1::::<><>::
+package-lock.json::JSON::-1::1712006365::0::1::::<><>::
+::res://Assets/::1714316424
+background.webp::CompressedTexture2D::5537721266095350588::1714162663::1714162663::1::::<><>::
+door.webp::CompressedTexture2D::4497380228894971499::1714162663::1714162663::1::::<><>::
+floor.webp::CompressedTexture2D::2290067354477403281::1714162663::1714162663::1::::<><>::
+wall_horizontal.webp::CompressedTexture2D::7050190383658148665::1714162663::1714162663::1::::<><>::
+wall_vertical.webp::CompressedTexture2D::1461681409950175076::1714162663::1714162663::1::::<><>::
+::res://Assets/MeleeAttack/::1714316411
+frame_apngframe01.png::CompressedTexture2D::6059258664144392723::1714269626::1714269626::1::::<><>::
+frame_apngframe02.png::CompressedTexture2D::7190041305567992466::1714269626::1714269626::1::::<><>::
+frame_apngframe03.png::CompressedTexture2D::2910831055903506338::1714269626::1714269626::1::::<><>::
+frame_apngframe04.png::CompressedTexture2D::5332705335962545096::1714269626::1714269626::1::::<><>::
+frame_apngframe05.png::CompressedTexture2D::4754149426717516795::1714269626::1714269626::1::::<><>::
+frame_apngframe06.png::CompressedTexture2D::1126285592508506655::1714269626::1714269626::1::::<><>::
+frame_apngframe07.png::CompressedTexture2D::1879999858616671172::1714269626::1714269626::1::::<><>::
+frame_apngframe08.png::CompressedTexture2D::2954341524942313225::1714269626::1714269626::1::::<><>::
+frame_apngframe09.png::CompressedTexture2D::96084499662043763::1714269626::1714269626::1::::<><>::
+frame_apngframe10.png::CompressedTexture2D::7334856620567526741::1714269626::1714269626::1::::<><>::
+frame_apngframe11.png::CompressedTexture2D::562866262659529812::1714269626::1714269626::1::::<><>::
+frame_apngframe12.png::CompressedTexture2D::3433668479612814675::1714269626::1714269626::1::::<><>::
+frame_apngframe13.png::CompressedTexture2D::6009390045481909247::1714269626::1714269626::1::::<><>::
+frame_apngframe14.png::CompressedTexture2D::310601858709412166::1714269626::1714269626::1::::<><>::
+frame_apngframe15.png::CompressedTexture2D::197027958399428255::1714269626::1714269626::1::::<><>::
+frame_apngframe16.png::CompressedTexture2D::3653043423661474651::1714269626::1714269626::1::::<><>::
+frame_apngframe17.png::CompressedTexture2D::4294367642163272574::1714269626::1714269626::1::::<><>::
+frame_apngframe18.png::CompressedTexture2D::711498451330008155::1714269626::1714269626::1::::<><>::
+frame_apngframe19.png::CompressedTexture2D::7051432230025721136::1714269626::1714269626::1::::<><>::
+frame_apngframe20.png::CompressedTexture2D::3069637090856124625::1714269626::1714269626::1::::<><>::
+frame_apngframe21.png::CompressedTexture2D::4917653884106616985::1714269626::1714269626::1::::<><>::
+frame_apngframe22.png::CompressedTexture2D::302166965052105086::1714269626::1714269626::1::::<><>::
+frame_apngframe23.png::CompressedTexture2D::9098734828626406722::1714269626::1714269626::1::::<><>::
+frame_apngframe24.png::CompressedTexture2D::7917612151090870141::1714269626::1714269626::1::::<><>::
+frame_apngframe25.png::CompressedTexture2D::119335904625016128::1714269626::1714269626::1::::<><>::
+frame_apngframe26.png::CompressedTexture2D::5978738698541844957::1714269626::1714269626::1::::<><>::
+frame_apngframe27.png::CompressedTexture2D::6116589317776245268::1714269626::1714269626::1::::<><>::
+frame_apngframe28.png::CompressedTexture2D::6246945834037833486::1714269626::1714269626::1::::<><>::
+frame_apngframe29.png::CompressedTexture2D::314569717202350079::1714269626::1714269626::1::::<><>::
+frame_apngframe30.png::CompressedTexture2D::2691793528547082823::1714269626::1714269626::1::::<><>::
+frame_apngframe31.png::CompressedTexture2D::63082198593827296::1714269626::1714269626::1::::<><>::
+frame_apngframe32.png::CompressedTexture2D::632139096201383518::1714269626::1714269626::1::::<><>::
+frame_apngframe33.png::CompressedTexture2D::6531691795788254729::1714269626::1714269626::1::::<><>::
+frame_apngframe34.png::CompressedTexture2D::5245022577406063941::1714269626::1714269626::1::::<><>::
+frame_apngframe35.png::CompressedTexture2D::794745640037291183::1714269626::1714269626::1::::<><>::
+frame_apngframe36.png::CompressedTexture2D::6422218230125616975::1714269626::1714269626::1::::<><>::
+frame_apngframe37.png::CompressedTexture2D::6101549557776840224::1714269626::1714269626::1::::<><>::
+frame_apngframe38.png::CompressedTexture2D::3066431349476825792::1714269626::1714269626::1::::<><>::
+frame_apngframe39.png::CompressedTexture2D::4328855876995397675::1714269626::1714269626::1::::<><>::
+frame_apngframe40.png::CompressedTexture2D::3579789156415704102::1714269626::1714269626::1::::<><>::
+::res://Assets/MeleeAttack 2/::1714316424
+::res://Scenes/::1714323358
+LoseScreen.tscn::PackedScene::8032926157303095357::1714270411::0::1::::<><>::res://Scripts/Objects/lose_screen.gd
+WinScreen.tscn::PackedScene::4346043668838564511::1714270411::0::1::::<><>::
+::res://Scenes/Abilities/::1714323627
+basic_projectile_ability.tscn::PackedScene::5715023813353599::1714141914::0::1::::<><>::res://Scripts/Abilities/basic_projectile_ability.gd
+dash_ability.tscn::PackedScene::8068260279664205567::1714323481::0::1::::<><>::res://Scripts/Abilities/dash_ability.gd
+healthBar_ability.tscn::PackedScene::8965213512035903371::1714270411::0::1::::<><>::res://Scripts/Abilities/healthBar_ability.gd
+melee_ability.tscn::PackedScene::3262596212621646329::1714323481::0::1::::<><>::res://Scripts/Abilities/melee_ability.gd<>uid://cslfdtkfk4wpv::::res://Assets/MeleeAttack/frame_apngframe01.png<>uid://dao56u428p1s5::::res://Assets/MeleeAttack/frame_apngframe02.png<>uid://bhqa7yk24h3f7::::res://Assets/MeleeAttack/frame_apngframe03.png<>uid://ch8g43xxmyc2k::::res://Assets/MeleeAttack/frame_apngframe04.png<>uid://b8y7e8k1u3qkh::::res://Assets/MeleeAttack/frame_apngframe05.png<>uid://qbt02t42hth4::::res://Assets/MeleeAttack/frame_apngframe06.png<>uid://11xk8ngr66uy::::res://Assets/MeleeAttack/frame_apngframe07.png<>uid://biddtqyif5y8h::::res://Assets/MeleeAttack/frame_apngframe08.png<>uid://bmsq6kqddxnv::::res://Assets/MeleeAttack/frame_apngframe09.png<>uid://dcrcatsoqaaen::::res://Assets/MeleeAttack/frame_apngframe10.png<>uid://iawlb3eqlwbc::::res://Assets/MeleeAttack/frame_apngframe11.png<>uid://bo6kavbdjgn3h::::res://Assets/MeleeAttack/frame_apngframe12.png<>uid://cru81nerhpvqd::::res://Assets/MeleeAttack/frame_apngframe13.png<>uid://eoptjysqca1c::::res://Assets/MeleeAttack/frame_apngframe14.png<>uid://c2pa0cpm8wip::::res://Assets/MeleeAttack/frame_apngframe15.png<>uid://bsbtdd0gq8bnv::::res://Assets/MeleeAttack/frame_apngframe16.png<>uid://b2ghuwper6ykc::::res://Assets/MeleeAttack/frame_apngframe17.png<>uid://kewjmr562kg6::::res://Assets/MeleeAttack/frame_apngframe18.png<>uid://c7p1b80jeu7we::::res://Assets/MeleeAttack/frame_apngframe19.png<>uid://bjy7qeoc5rax2::::res://Assets/MeleeAttack/frame_apngframe20.png<>uid://cccfbnngo4t5j::::res://Assets/MeleeAttack/frame_apngframe21.png<>uid://ekmv7ribmfq1::::res://Assets/MeleeAttack/frame_apngframe22.png<>uid://d2vq3ljpwi65k::::res://Assets/MeleeAttack/frame_apngframe23.png<>uid://dk2l6ee7kf47b::::res://Assets/MeleeAttack/frame_apngframe24.png<>uid://bx2pek5tljka::::res://Assets/MeleeAttack/frame_apngframe25.png<>uid://crge7nrhtbfwf::::res://Assets/MeleeAttack/frame_apngframe26.png<>uid://cte6lkjnljq1i::::res://Assets/MeleeAttack/frame_apngframe27.png<>uid://cvacjxxmhdtdu::::res://Assets/MeleeAttack/frame_apngframe28.png<>uid://eqm6gm5pd5q6::::res://Assets/MeleeAttack/frame_apngframe29.png<>uid://bel6pf0b5mcip::::res://Assets/MeleeAttack/frame_apngframe30.png<>uid://5s7prm5a8nc::::res://Assets/MeleeAttack/frame_apngframe31.png<>uid://jahid1jk6s4e::::res://Assets/MeleeAttack/frame_apngframe32.png<>uid://c0caalcyewcpt::::res://Assets/MeleeAttack/frame_apngframe33.png<>uid://cgyy0xn3vlpa8::::res://Assets/MeleeAttack/frame_apngframe34.png<>uid://lk8lyljqnxh4::::res://Assets/MeleeAttack/frame_apngframe35.png<>uid://cxq784k578d1h::::res://Assets/MeleeAttack/frame_apngframe36.png<>uid://cs6vvoapbiq21::::res://Assets/MeleeAttack/frame_apngframe37.png<>uid://bjxnw824vfwl1::::res://Assets/MeleeAttack/frame_apngframe38.png<>uid://b2w6vhfolb6dr::::res://Assets/MeleeAttack/frame_apngframe39.png<>uid://bracusxbmdyly::::res://Assets/MeleeAttack/frame_apngframe40.png
+move_ability.tscn::PackedScene::3988790515073486677::1714141914::0::1::::<><>::res://Scripts/Abilities/move_ability.gd
+nine_lives_ability.tscn::PackedScene::4947463710123928089::1714270411::0::1::::<><>::res://Scripts/Abilities/nine_lives_ability.gd
+print_ability.tscn::PackedScene::2893082318069768461::1713822648::0::1::::<><>::res://Scripts/Abilities/print_ability.gd
+punch_ability.tscn::PackedScene::744038827610002260::1713822648::0::1::::<><>::res://Scripts/Abilities/punch_ability.gd
+ranged_vision_ability.gd::GDScript::-1::1714099838::0::1::::<>Ability<>::
+ranged_vision_ability.tscn::PackedScene::5404623253505537614::1714099838::0::1::::<><>::res://Scenes/Abilities/ranged_vision_ability.gd
+text_ability.tscn::PackedScene::6086086853221461931::1714323637::0::1::::<><>::res://Scripts/Abilities/ability_text.gd
+tri_shot_projectile_ability.tscn::PackedScene::429379475579187406::1714099838::0::1::::<><>::res://Scripts/Abilities/tri_shot_projectile_ability.gd
+vision_ability.tscn::PackedScene::7749801754128912209::1714089977::0::1::::<><>::res://Scripts/Abilities/vision_ability.gd
+::res://Scenes/Abilities/Boss/::1714177166
+healthBar_ability.tscn::PackedScene::4088279440248474568::1713831444::0::1::::<><>::res://Scripts/Abilities/Boss/healthBar_ability.gd
+::res://Scenes/Areas/::1714323601
+AreaMover.gd::GDScript::-1::1707658915::0::1::::<>Area2D<>::
+area_0.tscn::PackedScene::3290003732337889625::1714178907::0::1::::<><>::res://Scripts/Areas/area_0.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://ct1bimecs3ce2::::res://Scenes/Areas/Area Objects/area_boss_door.tscn
+area_1.tscn::PackedScene::2755502406907540447::1714164308::0::1::::<><>::res://Scripts/Areas/area_100.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
+area_2.tscn::PackedScene::4486327128723510664::1714164308::0::1::::<><>::res://Scripts/Areas/area_2.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
+area_3.tscn::PackedScene::2199737001426849287::1714162663::0::1::::<><>::res://Scripts/Areas/area_3.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
+area_4.tscn::PackedScene::4099741977014501814::1714162663::0::1::::<><>::res://Scripts/Areas/area_4.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn
+area_22.tscn::PackedScene::3254946551199088239::1714164308::0::1::::<><>::res://Scripts/Areas/area_22.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
+area_33.tscn::PackedScene::8654538129724587943::1714164308::0::1::::<><>::res://Scripts/Areas/area_33.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn
+area_44.tscn::PackedScene::6553760304162888562::1714162663::0::1::::<><>::res://Scripts/Areas/area_44.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn
+area_100.tscn::PackedScene::5973801986661292110::1714141914::0::1::::<><>::res://Scripts/Areas/area_100.gd
+area_222.tscn::PackedScene::5647757259579388543::1714162663::0::1::::<><>::res://Scripts/Areas/area_222.gd<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn
+area_333.tscn::PackedScene::4799402940462920256::1714162663::0::1::::<><>::res://Scripts/Areas/area_333.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn<>uid://bvn0pje1wfi56::::res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
+area_444.tscn::PackedScene::8678922318126612808::1714162663::0::1::::<><>::res://Scripts/Areas/area_444.gd<>uid://ck5rpv777qhmi::::res://Assets/background.webp<>uid://bt4ixmf8kiyxf::::res://Scenes/Areas/Area Objects/area_door.tscn<>uid://cmg730sg7cqiw::::res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp<>uid://dxxfw23v663bq::::res://Scenes/Areas/Area Objects/area_wall_vertical.tscn<>uid://b37ir2s82yo62::::res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn
+world_manager.tscn::PackedScene::7332831277350975130::1714323481::0::1::::<><>::res://Scripts/Areas/world_manager.gd
+::res://Scenes/Areas/Area Objects/::1714323601
+area_boss_door.tscn::PackedScene::6160178858033824491::1714164308::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp
+area_door.tscn::PackedScene::3780403116402693299::1714164308::0::1::::<><>::res://Scripts/Areas/Area Objects/area_door.gd<>uid://7vlcsn1ysi4h::::res://Assets/floor.webp
+area_wall_door_horizontal.tscn::PackedScene::5629488044770519094::1714162663::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
+area_wall_door_vertical.tscn::PackedScene::3888768502722589443::1714162663::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
+area_wall_horizontal.tscn::PackedScene::4418285935599779585::1714162663::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
+area_wall_vertical.tscn::PackedScene::8821430477908961578::1714162663::0::1::::<><>::uid://c7pfuubpgsqv6::::res://Assets/wall_horizontal.webp
+::res://Scenes/Entites/::1714323481
+boss.tscn::PackedScene::5110789450181827039::1714270411::0::1::::<><>::res://Scripts/Entities/boss.gd
+melee_dash_enemy.tscn::PackedScene::3461609298317455408::1714323481::0::1::::<><>::res://Scripts/Entities/melee_dash_enemy.gd
+melee_enemy.tscn::PackedScene::3314661936352908702::1714270411::0::1::::<><>::res://Scripts/Entities/melee_enemy.gd
+player.tscn::PackedScene::3383834446001041586::1714323481::0::1::::<><>::res://Scripts/Entities/player.gd
+ranged_enemy.tscn::PackedScene::6110329001329467068::1714097236::0::1::::<><>::res://Scripts/Entities/ranged_enemy.gd
+test_enemy.tscn::PackedScene::6134245679762608471::1714099838::0::1::::<><>::res://Scripts/Entities/test_enemy.gd
+tri_ranged_enemy.tscn::PackedScene::1553066917776270362::1714099838::0::1::::<><>::res://Scripts/Entities/tri_ranged_enemy.gd
+::res://Scenes/Objects/::1714270411
+basic_projectile_object.tscn::PackedScene::8188254738857146271::1713834304::0::1::::<><>::
+delayed_explosion.tscn::PackedScene::8528030046193875055::1714100231::0::1::::<><>::res://Scripts/Objects/delayed_explosion.gd
+heart.tscn::PackedScene::4856189829276136850::1714270411::0::1::::<><>::
+::res://Scripts/::1714323487
+::res://Scripts/Abilities/::1714323627
+Ability.gd::GDScript::-1::1713831444::0::1::::Ability<>Node2D<>::
+ability_text.gd::GDScript::-1::1714323627::0::1::::<>Ability<>::
+basic_projectile_ability.gd::GDScript::-1::1714320183::0::1::::<>Projectile<>::
+dash_ability.gd::GDScript::-1::1714099838::0::1::::<>Ability<>::
+healthBar_ability.gd::GDScript::-1::1713834104::0::1::::<>Ability<>::
+melee_ability.gd::GDScript::-1::1714321169::0::1::::<>Ability<>::
+move_ability.gd::GDScript::-1::1713831444::0::1::::<>Ability<>::
+nine_lives_ability.gd::GDScript::-1::1714316722::0::1::::<>Ability<>::
+print_ability.gd::GDScript::-1::1707658895::0::1::::<>Ability<>::
+projectile_ability.gd::GDScript::-1::1713876507::0::1::::Projectile<>Ability<>::
+punch_ability.gd::GDScript::-1::1713831444::0::1::::<>Ability<>::
+tri_shot_projectile_ability.gd::GDScript::-1::1714320183::0::1::::<>Projectile<>::
+vision_ability.gd::GDScript::-1::1713834304::0::1::::<>Ability<>::
+::res://Scripts/Abilities/Boss/::1713833742
+healthBar_ability.gd::GDScript::-1::1713831444::0::1::::<>Ability<>::
+::res://Scripts/Areas/::1714323487
+area_0.gd::GDScript::-1::1714100215::0::1::::<>BaseArea<>::
+area_1.gd::GDScript::-1::1714100231::0::1::::<>BaseArea<>::
+area_2.gd::GDScript::-1::1714178907::0::1::::<>BaseArea<>::
+area_3.gd::GDScript::-1::1714321456::0::1::::<>BaseArea<>::
+area_4.gd::GDScript::-1::1713834104::0::1::::<>BaseArea<>::
+area_22.gd::GDScript::-1::1714178907::0::1::::<>BaseArea<>::
+area_33.gd::GDScript::-1::1714322024::0::1::::<>BaseArea<>::
+area_44.gd::GDScript::-1::1713834104::0::1::::<>BaseArea<>::
+area_100.gd::GDScript::-1::1714322154::0::1::::<>BaseArea<>::
+area_222.gd::GDScript::-1::1713834104::0::1::::<>BaseArea<>::
+area_333.gd::GDScript::-1::1713834104::0::1::::<>BaseArea<>::
+area_444.gd::GDScript::-1::1713834129::0::1::::<>BaseArea<>::
+base_area.gd::GDScript::-1::1713834104::0::1::::BaseArea<>Node2D<>::
+world_manager.gd::GDScript::-1::1714100231::0::1::::WorldManager<>Node2D<>::
+::res://Scripts/Areas/Area Objects/::1714323627
+area_door.gd::GDScript::-1::1714269729::0::1::::AreaDoor<>Area2D<>::
+area_wall.gd::GDScript::-1::1713225826::0::1::::<>Node<>::
+::res://Scripts/Entities/::1714323627
+boss.gd::GDScript::-1::1714269729::0::1::::<>Entity<>::
+entity.gd::GDScript::-1::1712272708::0::1::::Entity<>CharacterBody2D<>::
+melee_dash_enemy.gd::GDScript::-1::1714321360::0::1::::<>Entity<>::
+melee_enemy.gd::GDScript::-1::1714321360::0::1::::<>Entity<>::
+player.gd::GDScript::-1::1714323627::0::1::::Player<>Entity<>::
+ranged_enemy.gd::GDScript::-1::1713876507::0::1::::<>Entity<>::
+test_enemy.gd::GDScript::-1::1714316722::0::1::::<>Entity<>::
+tri_ranged_enemy.gd::GDScript::-1::1714320183::0::1::::<>Entity<>::
+::res://Scripts/Objects/::1714244127
+delayed_explosion.gd::GDScript::-1::1714100231::0::1::::<>SceneObject<>::
+lose_screen.gd::GDScript::-1::1714178907::0::1::::<>Node<>::
+scene_object.gd::GDScript::-1::1714100231::0::1::::SceneObject<>Node2D<>::

@@ -17,8 +17,10 @@ func execute(args: Dictionary) -> void:
 	effector_groups = effectors
 	add_effector_group(effector_groups[0])
 	
+	damage += (level-1)
+	speed = speed + (speed * .1 * level)
 	
-	if last_shot < local_cooldown: return 		#ability still on cooldown
+	if last_shot < local_cooldown || level < 1: return 		#ability still on cooldown
 	else: last_shot = 0
 	
 	#directions for each bullet

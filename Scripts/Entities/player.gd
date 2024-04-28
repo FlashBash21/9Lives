@@ -6,12 +6,14 @@ var move_ability := load_ability("move")
 var dash_ability := load_ability("dash")
 var basic_projectile_ability := load_ability("basic_projectile")
 var melee_ability := load_ability("melee")
+var tri_shot_ability := load_ability("tri_shot_projectile")
+var ability_text := load_ability("text")
 var health_bar : Ability
 var lives : Ability
-var maxhealth = 2
+var maxhealth = 1
 var nineLives = 9
 
-var tri_shot_ability := load_ability("tri_shot_projectile")
+
 
 func _ready() -> void:
 	#setup local vars
@@ -56,8 +58,8 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# tripple projectile ability
-	#if(Input.is_action_pressed("attack")): tri_shot_ability.execute(({"entity" = self, "speed" = 500, "direction" = get_local_mouse_position(),
-	#								"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
+	if(Input.is_action_pressed("attack")): tri_shot_ability.execute(({"entity" = self, "speed" = 500, "direction" = get_local_mouse_position(),
+									"cooldown" = 1, "damage" = 5, "effectors" = ["Enemy"]}))
 	
 	
 	#melee ability
@@ -78,17 +80,38 @@ func apply_damage(amount: int) -> void:
 
 func handle_death() -> void:
 	var parent = get_parent() as BaseArea
+	var textCoords = Vector2(225,150)
 	match parent.area_ability:
 		"Move":
 			move_ability.level_up()
+			ability_text.execute({"text" = "+++ Movement Speed Increased +++", "location" = textCoords})
 		"Dash":
 			dash_ability.level_up()
+			if(dash_ability.level == 1): 
+				ability_text.execute({"text" = "+++ Dash Unlocked +++", "location" = textCoords})
+			if(dash_ability.level > 1):
+				ability_text.execute({"text" = "+++ Dash Upgraded +++", "location" = textCoords})
 		"BasicRanged":
 			basic_projectile_ability.level_up()
+			if(basic_projectile_ability.level == 1): 
+				ability_text.execute({"text" = "+++ Projectile Unlocked +++", "location" = textCoords})
+			if(basic_projectile_ability.level > 1):
+				ability_text.execute({"text" = "+++ Projectile Upgraded +++", "location" = textCoords})
 		"Health":
 			maxhealth += 1
+			ability_text.execute({"text" = "+++ Health Increased +++", "location" = textCoords})
 		"TriRanged":
 			tri_shot_ability.level_up()
+			if(tri_shot_ability.level == 1): 
+				ability_text.execute({"text" = "+++ Triple Shot Unlocked +++", "location" = textCoords})
+			if(tri_shot_ability.level > 1):
+				ability_text.execute({"text" = "+++ Triple Shot Upgraded +++", "location" = textCoords})
+		"Melee":
+			melee_ability.level_up()
+			if(melee_ability.level == 1): 
+				ability_text.execute({"text" = "+++ Melee Unlocked +++", "location" = textCoords})
+			if(melee_ability.level > 1):
+				ability_text.execute({"text" = "+++ Melee Upgraded +++", "location" = textCoords})
 		_:
 			pass
 	#make parent signal an area load

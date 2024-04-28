@@ -8,4 +8,4 @@ func _ready() -> void:
 	for i in range(1):
 		var enemy = load_entity("melee_enemy")
 		enemy.position = Vector2(get_viewport().get_size().x/4, get_viewport().get_size().y/4 * (i+1))
-	area_ability = "dash"
+	area_ability = "Melee"

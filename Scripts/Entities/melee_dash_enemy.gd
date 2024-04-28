@@ -17,7 +17,7 @@ func _ready():
 	dash_ability.level_up()
 	self.hp = 15
 	add_to_group("Enemy")
-	
+	melee_ability.level_up()
 	
 	ranged_vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],

@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://csye7xikuqsoh"]
+
+[ext_resource type="Script" path="res://Scripts/Abilities/text_ability.gd" id="1_er4xo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxdik"]
+font_size = 40
+font_color = Color(0.584314, 0, 0.0666667, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="AbilityText" type="Node2D"]
+top_level = true
+script = ExtResource("1_er4xo")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+top_level = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -925.0
+offset_top = -352.0
+offset_right = -225.0
+offset_bottom = -297.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "Test"
+label_settings = SubResource("LabelSettings_bxdik")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(700, 60)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -25.0
+offset_right = 350.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.458824, 0.458824, 0.458824, 0.847059)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("..")
+update_position = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
