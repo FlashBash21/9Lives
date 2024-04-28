@@ -39,7 +39,8 @@ func _physics_process(delta: float) -> void:
 								"at" = distance,
 								"cooldown" = 1,
 								"attack_rate" = 1,
-								"range" = -90.00,
+								"range" = -10.00,
+								"damage" = 1,
 								"effectors" = ["Player"]})
 
 
@@ -59,11 +60,11 @@ func _dodge():
 	if (randi_range(0,1) == 0):
 		i = -1
 	randomize()
-	var rotate_dir = deg_to_rad(randi_range(0,360))
+	var rotate_dir = deg_to_rad(randi_range(0,90))
 	var direction = self.velocity.rotated(rotate_dir)
 	self.velocity = direction.normalized() * speed
 	if (!dash_ability.is_dashing() and self.velocity != Vector2.ZERO):
 		print("dash")
-		dash_ability.execute({"entity" = self, "speed" = self.speed*3, "duration" = 0.4})
+		dash_ability.execute({"entity" = self, "speed" = self.speed*2, "duration" = 0.4})
 	dash_time.start()
 	
