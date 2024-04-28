@@ -178,35 +178,23 @@ resource_name = "attack"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = false
-tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ColorRect/Area2D:monitoring")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [false, true, false]
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0.4),
 "transitions": PackedFloat32Array(1),
 "values": [{
@@ -221,23 +209,14 @@ _data = {
 }
 
 [node name="MeleeAbility" type="Node2D"]
-position = Vector2(1, 37)
-scale = Vector2(2, 2)
 script = ExtResource("1_l4qig")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -6.0
-offset_top = -49.0
-offset_right = 5.0
-offset_bottom = 51.0
-
-[node name="Area2D" type="Area2D" parent="ColorRect"]
-position = Vector2(6, 49)
+[node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 5
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(37.5, -12)
 scale = Vector2(1.6265, -0.817989)
 shape = SubResource("RectangleShape2D_486gx")
@@ -246,6 +225,8 @@ shape = SubResource("RectangleShape2D_486gx")
 position = Vector2(15, -10.5)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_iu0ja")
+frame = 5
+frame_progress = 0.89186
 
 [node name="AttackPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b37ir2s82yo62" path="res://Scenes/Areas/Area Objects/area_wall_horizontal.tscn" id="6_5ja5q"]
 
 [node name="area_1" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_ds1xa")
 
 [node name="Background" type="Sprite2D" parent="."]
