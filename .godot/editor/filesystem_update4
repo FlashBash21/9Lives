@@ -8,4 +8,15 @@ res://Scenes/Abilities/nine_lives_ability.tscn
 res://Scenes/Abilities/healthBar_ability.tscn
 res://Scenes/Objects/heart.tscn
 res://Scenes/Areas/Area Objects/area_door.tscn
-res://Scripts/Areas/Area Objects/area_door.gd
+res://Scenes/Areas/area_0.tscn
+res://Scenes/Areas/area_3.tscn
+res://Scenes/Areas/area_33.tscn
+res://Scripts/Areas/area_33.gd
+res://Scripts/Areas/area_3.gd
+res://Scripts/Entities/player.gd
+res://Scenes/Abilities/tri_shot_projectile_ability.tscn
+res://Scenes/Entites/melee_enemy.tscn
+res://Scenes/Entites/ranged_enemy.tscn
+res://Scripts/Entities/boss.gd
+res://Scenes/Areas/area_1.tscn
+res://Scripts/Areas/area_100.gd

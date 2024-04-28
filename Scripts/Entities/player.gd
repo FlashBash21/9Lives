@@ -9,7 +9,7 @@ var melee_ability := load_ability("melee")
 var health_bar : Ability
 var lives : Ability
 var maxhealth = 2
-var nineLives = 1
+var nineLives = 9
 
 var tri_shot_ability := load_ability("tri_shot_projectile")
 

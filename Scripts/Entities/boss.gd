@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		var p = bullet["projectile"] as CharacterBody2D
 		var vel = bullet["velocity"]
 		
-		if bullet["time"] >= 10:
+		if bullet["time"] >= 5:
 			p.queue_free()
 			projectiles.erase(bullet)
 			pass
