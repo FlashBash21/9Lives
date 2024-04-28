@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 								"at" = distance,
 								"cooldown" = 1,
 								"attack_rate" = 1,
-								"range" = -90.00,
+								"range" = -10.00,
 								"effectors" = ["Player"]})
 
 
