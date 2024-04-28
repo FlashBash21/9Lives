@@ -21,7 +21,7 @@ func _ready():
 	ranged_vision_ability.execute(({"entity" = self,
 						"effectors" = ["Player"],
 						"max_range" = self.scale * 200,
-						"min_range" = 90,
+						"min_range" = 70,
 						"speed" = self.speed}))			
 	
 
@@ -33,12 +33,13 @@ func _physics_process(delta: float) -> void:
 	var distance = (to_local(player.position) - to_local(self.position))
 	look_at((distance))
 	
-	if (self.position.distance_to(player.position) < 100):
+	if (self.position.distance_to(player.position) < 80):
 		melee_ability.execute({"entity" = self,
 								"at" = distance,
 								"cooldown" = 1,
 								"attack_rate" = 1,
 								"range" = -10.00,
+								"damage" = 1,
 								"effectors" = ["Player"]})
 
 

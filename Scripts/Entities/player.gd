@@ -65,8 +65,9 @@ func _physics_process(delta: float) -> void:
 														"at" = get_global_mouse_position(),
 														"cooldown" = 0.25,
 														"attack_rate" = 1,
-														"range" = 100.00,
-														"effectors" = ["Enemy"]})
+														"range" = 10.00,
+														"effectors" = ["Enemy"],
+														"damage" = 5})
 
 func apply_damage(amount: int) -> void:
 	if (dash_ability.is_dashing()): return

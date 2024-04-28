@@ -10,6 +10,7 @@ var recent_hits := []
 var speed_multi := 1.0
 var range := 10.0
 var cd : float
+var damage : int
 
 func _ready():
 	sprite.visible = false
@@ -22,6 +23,7 @@ func execute(args: Dictionary) -> void:
 	var attack_multi := args["attack_rate"] as float
 	var effectors = args["effectors"] as Array[StringName]
 	range = args["range"] as float
+	damage = args["damage"] as int
 	
 	effector_groups = effectors
 	
@@ -58,7 +60,7 @@ func hit_entities_in_range() -> void:
 			recent_hits.append(body)
 			for group in effector_groups:
 				if body.is_in_group(group):
-					body.apply_damage(5)
+					body.apply_damage(damage)
 					break
 
 func clear_recent_hits() -> void:
