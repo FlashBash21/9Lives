@@ -68,3 +68,6 @@ scale = Vector2(1, 0.997466)
 [node name="Top Room" parent="." instance=ExtResource("6_1k8d8")]
 position = Vector2(576, 31)
 rotation = 1.5708
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0

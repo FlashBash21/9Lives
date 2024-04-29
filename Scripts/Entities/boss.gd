@@ -13,6 +13,7 @@ var focused_entity : Entity
 var recent_hits := []
 var tracking: float = 90 * PI / 180
 var healthRate: float = 1
+var cameraShake: float = 0
 
 var projectiles := []
 
@@ -46,6 +47,15 @@ func _process(delta: float) -> void:
 		image.position = position
 		image.rotation = rotation
 		addToArea(image)
+	if (cameraShake > 0):
+		cameraShake -= delta
+		if (cameraShake <= 0):
+			cameraShake = 0
+			get_viewport().get_camera_2d().offset = Vector2.ZERO
+		else:
+			var r = cameraShake * 50 * sin(PI * cameraShake * 20)
+			var a = 4 * PI * cameraShake
+			get_viewport().get_camera_2d().offset = Vector2(r * cos(a), r * sin(a))
 
 func _physics_process(delta: float) -> void:
 	for bullet in projectiles:
@@ -153,6 +163,9 @@ func setSpeed(value: float) -> void:
 func setHealthRate(value: float) -> void:
 	healthRate = value
 
+func shakeCamera(value: float) -> void:
+	cameraShake = value
+
 func clear_recent_hits() -> void:
 	recent_hits = []
 
@@ -201,8 +214,24 @@ func fire(move: int) -> void:
 			for i in range(30):
 				var explosion = explosion_object.instantiate() as SceneObject
 				addToArea(explosion)
-				explosion.position = Vector2(screenWidth * randf_range(0,1), screenHeight * randf_range(0,1))
+				explosion.position = Vector2(screenWidth * randf_range(0.1,0.9), screenHeight * randf_range(0,1))
 				explosion.initialize({"time": 3 + i / 10.})
+
+func fireProjectile(pos: Vector2, angle: float, speed: float) -> void:
+	var projectile = basic_projectile_object.instantiate()
+	projectile.add_collision_exception_with(self)
+
+	addToArea(projectile)
+	
+	projectile.rotation = angle
+	projectile.position = pos
+	velocity = Vector2(1, 0).rotated(angle) * speed
+	
+	projectiles.append({
+		"projectile": projectile,
+		"velocity": velocity,
+		"time": 0
+		})
 
 func phaseChange(step: int) -> void:
 	phaseStep = step
@@ -224,22 +253,6 @@ func phaseChange(step: int) -> void:
 		7:
 			setTracking(90)
 			nextAction()
-
-func fireProjectile(pos: Vector2, angle: float, speed: float) -> void:
-	var projectile = basic_projectile_object.instantiate()
-	projectile.add_collision_exception_with(self)
-
-	addToArea(projectile)
-	
-	projectile.rotation = angle
-	projectile.position = pos
-	velocity = Vector2(1, 0).rotated(angle) * speed
-	
-	projectiles.append({
-		"projectile": projectile,
-		"velocity": velocity,
-		"time": 0
-		})
 
 func addToArea(obj: Node) -> void:
 	var area = get_tree().get_first_node_in_group("Area")
