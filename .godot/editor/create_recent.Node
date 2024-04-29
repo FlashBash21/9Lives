@@ -1,3 +1,6 @@
+Node2D
+Node
+AnimationPlayer
 Sprite2D
 Timer
 ColorRect
@@ -8,7 +11,4 @@ CPUParticles2D
 GPUParticles2D
 VideoStreamPlayer
 AnimatedSprite2D
-Node2D
 RichTextLabel
-Button
-StaticBody2D

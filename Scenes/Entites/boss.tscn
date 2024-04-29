@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ce2x7qu5jneep"]
+[gd_scene load_steps=19 format=3 uid="uid://ce2x7qu5jneep"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/boss.gd" id="1_luuug"]
 
@@ -628,6 +628,42 @@ tracks/6/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ScreamImage:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ScreamImage:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ScreamImage:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961)]
+}
 
 [sub_resource type="Animation" id="Animation_86k53"]
 resource_name = "Slam"
@@ -849,12 +885,9 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.6, 1, 1.4, 1.6, 1.8, 6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.6, 1.4, 1.6, 1.8, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
-"args": [180.0],
-"method": &"setTracking"
-}, {
 "args": [0.0],
 "method": &"setTracking"
 }, {
@@ -872,13 +905,459 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_w7uav"]
+resource_name = "PunchL2"
+length = 3.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/RHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.6, 1.8, 2, 2.4, 2.6, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, 64), Vector2(16, 48), Vector2(142.851, 8.57438), Vector2(142.851, 8.57438), Vector2(104, 16), Vector2(96, 48), Vector2(96, 48), Vector2(40, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/LHand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.4, 1.6, 1.8, 2.4, 2.6, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, -64), Vector2(16, -64), Vector2(16, -64), Vector2(124.708, -72), Vector2(124.708, -72), Vector2(40, -64), Vector2(40, -64), Vector2(88, -64), Vector2(96, -48), Vector2(96, -48), Vector2(40, -64)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.3, 1.4, 1.8, 2, 2.4, 2.6, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523599, 0.523599, -0.523599, -0.523599, -1.0472, 12.5664]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.6, 1.8, 2.4, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [90.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [30.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [180.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [90.0],
+"method": &"setTracking"
+}, {
+"args": [],
+"method": &"nextAction"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.3, 1.4, 1.8, 2, 2.6, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [500.0],
+"method": &"setSpeed"
+}, {
+"args": [0.0],
+"method": &"setSpeed"
+}, {
+"args": [200.0],
+"method": &"setSpeed"
+}, {
+"args": [0.0],
+"method": &"setSpeed"
+}, {
+"args": [200.0],
+"method": &"setSpeed"
+}, {
+"args": [0.0],
+"method": &"setSpeed"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.8, 2.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"clear_recent_hits"
+}, {
+"args": [],
+"method": &"clear_recent_hits"
+}, {
+"args": [],
+"method": &"clear_recent_hits"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Body/RHand:monitoring")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.6, 1.8, 2.4, 2.6, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/LHand:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.3, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.523599, -0.523599, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/LHand:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.6, 1.3, 1.6, 2.6, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_0jtyc"]
+resource_name = "PunchR2"
+length = 3.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/RHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.4, 1.6, 1.8, 2.4, 2.6, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, 64), Vector2(16, 64), Vector2(16, 64), Vector2(124.708, 72), Vector2(124.708, 72), Vector2(40, 64), Vector2(40, 64), Vector2(88, 64), Vector2(96, 48), Vector2(96, 48), Vector2(40, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/RHand:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.3, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.523599, 0.523599, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Body/LHand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6, 1.8, 2, 2.4, 2.6, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, -64), Vector2(16, -64), Vector2(142.851, -8.57438), Vector2(142.851, -8.57439), Vector2(104, -16), Vector2(96, -48), Vector2(96, -48), Vector2(40, -64)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3, 1.4, 1.8, 2, 2.4, 2.6, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.523599, -0.523599, 0.523599, 0.523599, 1.0472, -12.5664]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.6, 1.8, 2.4, 3.4, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [90.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [30.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [180.0],
+"method": &"setTracking"
+}, {
+"args": [0.0],
+"method": &"setTracking"
+}, {
+"args": [90.0],
+"method": &"setTracking"
+}, {
+"args": [],
+"method": &"nextAction"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.3, 1.4, 1.8, 2, 2.6, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [500.0],
+"method": &"setSpeed"
+}, {
+"args": [0.0],
+"method": &"setSpeed"
+}, {
+"args": [200.0],
+"method": &"setSpeed"
+}, {
+"args": [0.0],
+"method": &"setSpeed"
+}, {
+"args": [200.0],
+"method": &"setSpeed"
+}, {
+"args": [0.0],
+"method": &"setSpeed"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.8, 2.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"clear_recent_hits"
+}, {
+"args": [],
+"method": &"clear_recent_hits"
+}, {
+"args": [],
+"method": &"clear_recent_hits"
+}]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Body/RHand:monitoring")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.6, 1.3, 1.6, 2.6, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Body/LHand:monitoring")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.6, 1.8, 2.4, 2.6, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_rcra0"]
+resource_name = "PhaseChange"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body/RHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.5, 1.7, 1.9, 2.1, 2.3, 2.5, 2.7, 3.1, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, 64), Vector2(-20, 64), Vector2(-20, 64), Vector2(96, 48), Vector2(96, 48), Vector2(40, 64), Vector2(40, 64), Vector2(32, 96), Vector2(32, 96), Vector2(96, 16), Vector2(96, 16), Vector2(40, 64)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body/LHand:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6, 1, 1.3, 1.5, 1.7, 1.9, 2.1, 2.3, 2.5, 2.7, 3.1, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(40, -64), Vector2(-20, -64), Vector2(-20, -64), Vector2(96, -48), Vector2(96, -48), Vector2(40, -64), Vector2(40, -64), Vector2(32, -96), Vector2(32, -96), Vector2(96, -16), Vector2(96, -16), Vector2(40, -64)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.3, 1.5, 1.7, 1.9, 3.1, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [1],
+"method": &"phaseChange"
+}, {
+"args": [2],
+"method": &"phaseChange"
+}, {
+"args": [3],
+"method": &"phaseChange"
+}, {
+"args": [4],
+"method": &"phaseChange"
+}, {
+"args": [5],
+"method": &"phaseChange"
+}, {
+"args": [6],
+"method": &"phaseChange"
+}, {
+"args": [3],
+"method": &"fire"
+}, {
+"args": [7],
+"method": &"phaseChange"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Body/LHand:monitoring")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 1.3, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Body/RHand:monitoring")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6, 1.3, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ScreamImage:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.3, 2.7, 3.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ScreamImage:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.7, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5, 5), Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ScreamImage:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(2.7, 3.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.501961), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_krbm3"]
 _data = {
 "Jump": SubResource("Animation_5emxn"),
 "Lunge": SubResource("Animation_fxn7b"),
 "Lunge2": SubResource("Animation_be01f"),
+"PhaseChange": SubResource("Animation_rcra0"),
 "PunchL": SubResource("Animation_ing0o"),
+"PunchL2": SubResource("Animation_w7uav"),
 "PunchR": SubResource("Animation_7e4ln"),
+"PunchR2": SubResource("Animation_0jtyc"),
 "RESET": SubResource("Animation_tkyo3"),
 "Slam": SubResource("Animation_86k53"),
 "Zone_1": SubResource("Animation_c1blp"),
@@ -895,6 +1374,7 @@ script = ExtResource("1_luuug")
 shape = SubResource("CircleShape2D_ibtxy")
 
 [node name="Body" type="Node2D" parent="."]
+z_index = 1
 
 [node name="ColorRect" type="ColorRect" parent="Body"]
 offset_left = -40.0
@@ -916,7 +1396,6 @@ offset_top = -32.0
 offset_right = 32.0
 offset_bottom = 32.0
 color = Color(1, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
 
 [node name="LHand" type="Area2D" parent="Body"]
 position = Vector2(40, -64)
@@ -936,3 +1415,29 @@ color = Color(1, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_krbm3")
 }
+
+[node name="ScreamImage" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.501961)
+scale = Vector2(1.5, 1.5)
+
+[node name="ColorRect" type="ColorRect" parent="ScreamImage"]
+offset_left = -40.0
+offset_top = -64.0
+offset_right = 40.0
+offset_bottom = 64.0
+color = Color(0.6, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ScreamImage"]
+offset_left = 8.0
+offset_top = -96.0
+offset_right = 72.0
+offset_bottom = -32.0
+color = Color(0.6, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="ScreamImage"]
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 72.0
+offset_bottom = 96.0
+color = Color(0.6, 0, 0, 1)

@@ -2,6 +2,7 @@ extends Entity
 
 var basic_projectile_object = load("res://Scenes/Objects/basic_projectile_object.tscn")
 var explosion_object = load("res://Scenes/Objects/delayed_explosion.tscn")
+var afterimage = load("res://Scenes/Objects/boss_afterimage.tscn")
 
 var health_bar : Ability
 
@@ -20,6 +21,7 @@ var actionCount = 0
 var zoneCount = 0
 var nextHand = -1
 var phase:int
+var phaseStep: int
 
 func _ready():
 	self.hp = 200
@@ -39,6 +41,11 @@ func _process(delta: float) -> void:
 	if (noAction): nextAction()
 	hit_RHand()
 	hit_LHand()
+	if (speed > 1000):
+		var image = afterimage.instantiate()
+		image.position = position
+		image.rotation = rotation
+		addToArea(image)
 
 func _physics_process(delta: float) -> void:
 	for bullet in projectiles:
@@ -63,7 +70,21 @@ func _physics_process(delta: float) -> void:
 	
 	if (!focused_entity): return
 	
-	if (tracking > 0):
+	if (phaseStep == 1):
+		var maxA = PI * delta
+		var da = get_angle_to(Vector2(screenWidth,screenHeight)/2.)
+		if (maxA > abs(da)):
+			look_at(Vector2(screenWidth,screenHeight)/2.)
+		else:
+			rotate(maxA * sign(da))
+	elif (phaseStep == 5):
+		var maxA = PI * delta
+		var da = PI/2 - rotation
+		if (maxA > abs(da)):
+			rotate(da)
+		else:
+			rotate(maxA * sign(da))
+	elif (tracking > 0):
 		var maxA = tracking * delta
 		var da = get_angle_to(focused_entity.position)
 		if (maxA > abs(da)):
@@ -90,7 +111,12 @@ func nextAction() -> void:
 	
 	if (hp < 120 and phase == 1):
 		phase = 2
-		zoneCount = 5
+		$AnimationPlayer.queue("PhaseChange")
+		$AnimationPlayer.queue("Lunge2")
+		actionCount = -1
+		zoneCount = 0
+		nextHand = -1
+		return
 	
 	if (phase == 2):
 		if (zoneCount >= 5):
@@ -110,9 +136,9 @@ func nextAction() -> void:
 	elif distance < 300:
 		if nextHand < 0:
 			nextHand = randi() % 2
-			$AnimationPlayer.queue(["PunchR","PunchL"][1-nextHand])
+			$AnimationPlayer.queue((["PunchR2","PunchL2"] if phase == 2 else ["PunchR","PunchL"])[1-nextHand])
 		else:
-			$AnimationPlayer.queue(["PunchR","PunchL"][nextHand])
+			$AnimationPlayer.queue((["PunchR2","PunchL2"] if phase == 2 else ["PunchR","PunchL"])[nextHand])
 		actionCount += 1
 	else:
 		$AnimationPlayer.queue("Slam")
@@ -163,6 +189,9 @@ func fire(move: int) -> void:
 		0:
 			for i in range(17):
 				fireProjectile(position + Vector2(1,0).rotated(rotation) * 128, rotation + (i - 8)/17. * PI * 3 / 5, 200)
+			if phase == 2:
+				for i in range(3):
+					fireProjectile(position + Vector2(1,0).rotated(rotation) * 128, rotation + (i - 1)/3. * PI / 2., 400)
 		1:
 			for i in range(9):
 				fireProjectile(Vector2(screenWidth * (i+1) / 10., 50), PI/2, 300)
@@ -174,6 +203,27 @@ func fire(move: int) -> void:
 				addToArea(explosion)
 				explosion.position = Vector2(screenWidth * randf_range(0,1), screenHeight * randf_range(0,1))
 				explosion.initialize({"time": 3 + i / 10.})
+
+func phaseChange(step: int) -> void:
+	phaseStep = step
+	match step:
+		1: # Turn to Center
+			setHealthRate(0.2)
+			setTracking(0)
+		2: # Stop Turning
+			pass
+		3: # Dash to Center
+			setSpeed(position.distance_to(Vector2(screenWidth,screenWidth)/2.)*2)
+		4: # Stop Dashing
+			setSpeed(0)
+			position = Vector2(screenWidth, screenHeight)/2.
+		5: # Turn to bottom
+			pass
+		6: # Stop Turning
+			clear_recent_hits()
+		7:
+			setTracking(90)
+			nextAction()
 
 func fireProjectile(pos: Vector2, angle: float, speed: float) -> void:
 	var projectile = basic_projectile_object.instantiate()

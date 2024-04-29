@@ -15,3 +15,8 @@ res://Scenes/Abilities/basic_projectile_ability.tscn
 res://Scenes/Abilities/Boss/healthBar_ability.tscn
 res://Scenes/Entites/boss.tscn
 res://Scenes/Objects/delayed_explosion.tscn
+res://Scripts/Abilities/melee_ability.gd
+res://Scenes/Objects/boss_afterimage.tscn
+res://Scripts/Entities/boss.gd
+res://Scripts/Objects/auto_animation.gd
+res://Scripts/Entities/player.gd
