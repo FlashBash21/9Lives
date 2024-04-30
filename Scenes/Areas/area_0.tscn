@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bm4x47g2pyrhx"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_0.gd" id="1_eo57l"]
-[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/background.webp" id="2_oqi7r"]
+[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/map/background.webp" id="2_oqi7r"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_syyrj"]
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn" id="3_mnyar"]
-[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/floor.webp" id="4_duq7m"]
+[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/map/floor.webp" id="4_duq7m"]
 [ext_resource type="PackedScene" uid="uid://bvn0pje1wfi56" path="res://Scenes/Areas/Area Objects/area_wall_door_vertical.tscn" id="5_bvntk"]
 [ext_resource type="PackedScene" uid="uid://ct1bimecs3ce2" path="res://Scenes/Areas/Area Objects/area_boss_door.tscn" id="7_uuo41"]
 

@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dm7lckvns63p0"]
+[gd_scene load_steps=3 format=3 uid="uid://dm7lckvns63p0"]
 
 [ext_resource type="Script" path="res://Scripts/Abilities/dash_ability.gd" id="1_h6af1"]
+[ext_resource type="AudioStream" uid="uid://beldw1rgm4e4o" path="res://Assets/soundeffects/whoosh1.wav" id="2_dsap3"]
 
 [node name="Dash Ability" type="Node2D"]
 script = ExtResource("1_h6af1")
 
 [node name="DashTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_dsap3")

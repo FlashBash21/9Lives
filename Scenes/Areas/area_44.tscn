@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_44.gd" id="1_vb0e3"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_ucsw3"]
-[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/background.webp" id="2_v8jmj"]
+[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/map/background.webp" id="2_v8jmj"]
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn" id="3_2ub2j"]
-[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/floor.webp" id="3_xw5ks"]
+[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/map/floor.webp" id="3_xw5ks"]
 [ext_resource type="PackedScene" uid="uid://dxxfw23v663bq" path="res://Scenes/Areas/Area Objects/area_wall_vertical.tscn" id="4_m0jdk"]
 
 [node name="Area 44" type="Node2D"]

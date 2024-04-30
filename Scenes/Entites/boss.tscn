@@ -1,6 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://ce2x7qu5jneep"]
+[gd_scene load_steps=18 format=3 uid="uid://ce2x7qu5jneep"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/boss.gd" id="1_luuug"]
+[ext_resource type="AudioStream" uid="uid://bny73ykqnlahn" path="res://Assets/soundeffects/boom1.wav" id="2_rbk5s"]
+[ext_resource type="AudioStream" uid="uid://cbqeff71apjp0" path="res://Assets/soundeffects/breathypew2.wav" id="3_ku1a6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibtxy"]
 radius = 40.0
@@ -936,3 +938,9 @@ color = Color(1, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_krbm3")
 }
+
+[node name="boom1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_rbk5s")
+
+[node name="shoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ku1a6")

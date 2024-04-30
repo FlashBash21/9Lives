@@ -23,6 +23,7 @@ func _physics_process(delta):
 	if is_dashing():
 		entity.velocity = dir * ((level+1)/2) * (speed) 
 		entity.move_and_slide()
+		$AudioStreamPlayer.play()
 		#print("REAL DASH")
 
 func is_dashing() -> bool:

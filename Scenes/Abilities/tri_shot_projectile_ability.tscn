@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://gd821ynoh4t3"]
+[gd_scene load_steps=3 format=3 uid="uid://gd821ynoh4t3"]
 
 [ext_resource type="Script" path="res://Scripts/Abilities/tri_shot_projectile_ability.gd" id="1_yj18c"]
+[ext_resource type="AudioStream" uid="uid://cf3nr60ajs0os" path="res://Assets/soundeffects/x3pew.wav" id="2_i7alf"]
 
 [node name="TriShotProjectileAbility" type="Node2D"]
 script = ExtResource("1_yj18c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_i7alf")

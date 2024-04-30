@@ -35,6 +35,7 @@ func execute(args: Dictionary) -> void:
 		attack_player.play("attack", -1, 1)
 		attack_animation.visible = true
 		attack_animation.play()
+		$AudioStreamPlayer.play()
 		
 
 func _process(delta):

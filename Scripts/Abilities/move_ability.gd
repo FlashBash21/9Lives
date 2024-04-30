@@ -10,4 +10,6 @@ func execute(args: Dictionary):
 	
 	var vel = direction * speed
 	entity.velocity = vel
+	#entity.rotation = Vector2.UP.angle_to(entity.velocity.normalized())
 	entity.move_and_slide()
+	
