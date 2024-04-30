@@ -1,6 +1,6 @@
 extends Entity
 
-var basic_projectile_object = load("res://Scenes/Objects/basic_projectile_object.tscn")
+var basic_projectile_object = load("res://Scenes/Objects/boss_projectile_object.tscn")
 var explosion_object = load("res://Scenes/Objects/delayed_explosion.tscn")
 var afterimage = load("res://Scenes/Objects/boss_afterimage.tscn")
 
@@ -25,7 +25,7 @@ var phase:int
 var phaseStep: int
 
 func _ready():
-	self.hp = 1
+	self.hp = 200
 	add_to_group("Enemy")
 	
 	health_bar = load_ability("Boss/healthBar")
@@ -159,6 +159,8 @@ func setTracking(value: float) -> void:
 
 func setSpeed(value: float) -> void:
 	speed = value
+	if (value > 1000):
+		$DashAudio.play()
 
 func setHealthRate(value: float) -> void:
 	healthRate = value
@@ -200,6 +202,7 @@ func hit_LHand() -> void:
 func fire(move: int) -> void:
 	match move:
 		0:
+			$ShootAudio.play()
 			for i in range(17):
 				fireProjectile(position + Vector2(1,0).rotated(rotation) * 128, rotation + (i - 8)/17. * PI * 3 / 5, 200)
 			if phase == 2:
@@ -237,6 +240,7 @@ func phaseChange(step: int) -> void:
 	phaseStep = step
 	match step:
 		1: # Turn to Center
+			$PhaseAudio.play()
 			setHealthRate(0.2)
 			setTracking(0)
 		2: # Stop Turning

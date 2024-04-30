@@ -20,9 +20,14 @@ func _process(delta: float) -> void:
 			$Timer.start()
 			phase = 2
 			$Sprite2D.modulate.a = 1
+			$Audio.play()
 	if (phase == 2):
 		if ($Timer.is_stopped()):
-			self.queue_free()
+			$Timer.wait_time = 0.8
+			$Timer.start()
+			phase = 3
+			$Sprite2D.hide()
+			$Area2D.monitoring = false
 		else:
 			var bodies = $Area2D.get_overlapping_bodies() as Array[Entity]
 			for body in bodies:
@@ -32,5 +37,8 @@ func _process(delta: float) -> void:
 						body.apply_damage(1)
 						print("Explosion Hit")
 						break
+	if (phase == 3):
+		if ($Timer.is_stopped()):
+			queue_free()
 
 

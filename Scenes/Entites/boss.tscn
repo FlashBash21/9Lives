@@ -1,8 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://ce2x7qu5jneep"]
+[gd_scene load_steps=23 format=3 uid="uid://ce2x7qu5jneep"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/boss.gd" id="1_luuug"]
-[ext_resource type="AudioStream" uid="uid://bny73ykqnlahn" path="res://Assets/soundeffects/boom1.wav" id="2_rbk5s"]
+[ext_resource type="AudioStream" uid="uid://dyknspuyqggk" path="res://Assets/soundeffects/I'm ticked off.wav" id="3_iw870"]
 [ext_resource type="AudioStream" uid="uid://cbqeff71apjp0" path="res://Assets/soundeffects/breathypew2.wav" id="3_ku1a6"]
+[ext_resource type="AudioStream" uid="uid://beldw1rgm4e4o" path="res://Assets/soundeffects/whoosh1.wav" id="4_tg76t"]
+[ext_resource type="AudioStream" uid="uid://b5sr4jmdpii4y" path="res://Assets/soundeffects/wham3.wav" id="5_7a7uj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ibtxy"]
 radius = 40.0
@@ -509,6 +511,37 @@ tracks/8/keys = {
 "update": 1,
 "values": [false, true, false, true, false]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WhamAudio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.3, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DashAudio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_w7uav"]
 resource_name = "PunchL2"
@@ -668,6 +701,37 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WhamAudio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.3, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DashAudio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_7e4ln"]
@@ -829,6 +893,37 @@ tracks/8/keys = {
 "update": 1,
 "values": [false, true, false, true, false]
 }
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WhamAudio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.3, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DashAudio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_0jtyc"]
 resource_name = "PunchR2"
@@ -988,6 +1083,37 @@ tracks/8/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [false, true, false, true, false]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("WhamAudio")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.3, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DashAudio")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_tkyo3"]
@@ -1461,8 +1587,16 @@ offset_right = 72.0
 offset_bottom = 96.0
 color = Color(0.6, 0, 0, 1)
 
-[node name="boom1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_rbk5s")
-
-[node name="shoot" type="AudioStreamPlayer" parent="."]
+[node name="ShootAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ku1a6")
+
+[node name="PhaseAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iw870")
+
+[node name="DashAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_tg76t")
+volume_db = 5.0
+
+[node name="WhamAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7a7uj")
+volume_db = -10.0

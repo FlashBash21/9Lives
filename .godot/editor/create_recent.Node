@@ -1,3 +1,5 @@
+AudioStreamPlayer
+AudioStreamPlayer2D
 Camera2D
 Node2D
 Node
@@ -10,6 +12,3 @@ PanelContainer
 Label
 CPUParticles2D
 GPUParticles2D
-VideoStreamPlayer
-AnimatedSprite2D
-RichTextLabel

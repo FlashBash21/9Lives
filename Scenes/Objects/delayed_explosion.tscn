@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtrbn5xn3ikol"]
+[gd_scene load_steps=5 format=3 uid="uid://dtrbn5xn3ikol"]
 
 [ext_resource type="Script" path="res://Scripts/Objects/delayed_explosion.gd" id="1_f86vl"]
 [ext_resource type="Texture2D" uid="uid://canam16jqjux2" path="res://Assets/Circle.png" id="2_7fq52"]
+[ext_resource type="AudioStream" uid="uid://bny73ykqnlahn" path="res://Assets/soundeffects/boom1.wav" id="3_i72oq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_383wt"]
 radius = 128.0
@@ -15,9 +16,13 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7fq52")
 
 [node name="Area2D" type="Area2D" parent="."]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_383wt")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_i72oq")
