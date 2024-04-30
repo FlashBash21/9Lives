@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bohfi2loq58fu"]
+[gd_scene load_steps=5 format=3 uid="uid://bohfi2loq58fu"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/player.gd" id="1_mqpro"]
+[ext_resource type="Texture2D" uid="uid://cptolfs4e73da" path="res://Assets/standing.webp" id="2_nx8pw"]
+[ext_resource type="AudioStream" uid="uid://cbwccrvbkhiok" path="res://Assets/soundeffects/playerdamagedeath1.wav" id="3_27sh6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ouw1c"]
-size = Vector2(25, 25)
+size = Vector2(24, 32)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 10
 script = ExtResource("1_mqpro")
 
 [node name="Sprite" type="ColorRect" parent="."]
+visible = false
 offset_left = -19.0
 offset_top = -20.0
 offset_right = 6.0
@@ -17,5 +20,17 @@ offset_bottom = 5.0
 color = Color(0, 0, 1, 1)
 
 [node name="Hurtbox" type="CollisionShape2D" parent="."]
-position = Vector2(-6.5, -7.5)
+rotation = -1.5708
 shape = SubResource("RectangleShape2D_ouw1c")
+
+[node name="damage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_27sh6")
+
+[node name="SpriteBox" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteBox"]
+position = Vector2(5, -2)
+rotation = -1.5708
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_nx8pw")
+flip_h = true

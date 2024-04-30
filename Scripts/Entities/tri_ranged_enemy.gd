@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 func apply_damage(ammount: int) -> void:
 	hp = hp -  ammount
 	print("hp: ", hp)	
-	
+	$damage.play()
 	if hp <= 0 : 
 		print("dead")
 		tri_projectile_ability.clean_up_projectiles()

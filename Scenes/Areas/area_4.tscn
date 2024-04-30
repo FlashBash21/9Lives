@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://byn7fe85ysfxe"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/area_4.gd" id="1_1y1jc"]
-[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/background.webp" id="2_as65k"]
+[ext_resource type="Texture2D" uid="uid://ck5rpv777qhmi" path="res://Assets/map/background.webp" id="2_as65k"]
 [ext_resource type="PackedScene" uid="uid://bt4ixmf8kiyxf" path="res://Scenes/Areas/Area Objects/area_door.tscn" id="2_sqxu4"]
-[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/floor.webp" id="3_p7cs6"]
+[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/map/floor.webp" id="3_p7cs6"]
 [ext_resource type="PackedScene" uid="uid://cmg730sg7cqiw" path="res://Scenes/Areas/Area Objects/area_wall_door_horizontal.tscn" id="3_uh1es"]
 [ext_resource type="PackedScene" uid="uid://dxxfw23v663bq" path="res://Scenes/Areas/Area Objects/area_wall_vertical.tscn" id="6_jf05l"]
 

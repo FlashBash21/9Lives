@@ -32,6 +32,7 @@ func _physics_process(delta: float) -> void:
 func apply_damage(ammount: int) -> void:
 	hp = hp -  ammount
 	print("hp: ", hp)	
+	$damage.play()
 	
 	if hp <= 0 : 
 		print("dead")

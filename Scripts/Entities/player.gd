@@ -8,6 +8,7 @@ var basic_projectile_ability := load_ability("basic_projectile")
 var melee_ability := load_ability("melee")
 var tri_shot_ability := load_ability("tri_shot_projectile")
 var ability_text := load_ability("text")
+var music := load_ability("music")
 var health_bar : Ability
 var lives : Ability
 var maxhealth = 1
@@ -43,8 +44,14 @@ func _physics_process(delta: float) -> void:
 	var directionY = Input.get_axis("move_up", "move_down")
 	var dir = Vector2(directionX, directionY).normalized()
 	
+	
+	
+	
 	#cannot move while dashing
-	if (!dash_ability.is_dashing()): move_ability.execute({"entity" = self, "speed" = self.speed, "direction" = dir})
+	if (!dash_ability.is_dashing()): 
+		move_ability.execute({"entity" = self, "speed" = self.speed, "direction" = dir})
+		var look = self.position - self.get_last_motion()
+		$SpriteBox.look_at(look)
 	#velocity.x = move_toward(velocity.x, 0, SPEED)
 	
 	#dash if we are not dashing and we are moving
@@ -75,6 +82,7 @@ func apply_damage(amount: int) -> void:
 	if (dash_ability.is_dashing()): return
 	hp -= amount
 	health_bar.execute({"hp":hp})
+	$damage.play()
 	if (hp <= 0):
 		handle_death()
 
@@ -116,6 +124,11 @@ func handle_death() -> void:
 			pass
 	#make parent signal an area load
 	parent.query_area_load.emit(0)
+	music.execute({"melody_melee" = melee_ability.level,
+				   "bass_dash" = dash_ability.level, 
+				   "vibe_basicProjectile" = basic_projectile_ability.level,
+				   "basic16th_tripleProjectile" = tri_shot_ability.level,
+				   "keys_movement" = move_ability.level	})
 	self.hp = maxhealth
 	health_bar.execute({"hp": hp})
 	self.position = Vector2(575,325)

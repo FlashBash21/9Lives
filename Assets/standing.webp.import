@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5ctgv038a3mt"
-path="res://.godot/imported/door.webp-7b39e27949f11c561b6cc698d891bb73.ctex"
+uid="uid://cptolfs4e73da"
+path="res://.godot/imported/standing.webp-53787d0222a2df04769a975ecda2ff24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/door.webp"
-dest_files=["res://.godot/imported/door.webp-7b39e27949f11c561b6cc698d891bb73.ctex"]
+source_file="res://Assets/standing.webp"
+dest_files=["res://.godot/imported/standing.webp-53787d0222a2df04769a975ecda2ff24.ctex"]
 
 [params]
 

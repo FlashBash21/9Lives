@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 func apply_damage(amount: int) -> void:
 	hp = hp - amount
 	print("hp: ", hp)	
-	
+	$damage.play()
 	if hp <= 0 : 
 		print("dead")
 		self.queue_free()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://wek1xyw6tna5"]
+[gd_scene load_steps=4 format=3 uid="uid://wek1xyw6tna5"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/tri_ranged_enemy.gd" id="1_xirxf"]
+[ext_resource type="AudioStream" uid="uid://brpea8jlo2vbx" path="res://Assets/soundeffects/playerdamagedeath4.wav" id="2_glggc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mceb"]
 size = Vector2(46, 44)
@@ -20,3 +21,6 @@ color = Color(0.862745, 0.972549, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_4mceb")
+
+[node name="damage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_glggc")

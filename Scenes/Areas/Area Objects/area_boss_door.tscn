@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ct1bimecs3ce2"]
 
 [ext_resource type="Script" path="res://Scripts/Areas/Area Objects/area_door.gd" id="1_swnje"]
-[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/floor.webp" id="2_xtei6"]
+[ext_resource type="Texture2D" uid="uid://7vlcsn1ysi4h" path="res://Assets/map/floor.webp" id="2_xtei6"]
 
 [sub_resource type="Gradient" id="Gradient_cwq6c"]
 

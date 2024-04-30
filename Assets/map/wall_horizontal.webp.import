@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck5rpv777qhmi"
-path="res://.godot/imported/background.webp-9c330f21cb9c5594442bf77c7f34c733.ctex"
+uid="uid://c7pfuubpgsqv6"
+path="res://.godot/imported/wall_horizontal.webp-ce36fdb86ed5f02129366f416a1fa57f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/background.webp"
-dest_files=["res://.godot/imported/background.webp-9c330f21cb9c5594442bf77c7f34c733.ctex"]
+source_file="res://Assets/map/wall_horizontal.webp"
+dest_files=["res://.godot/imported/wall_horizontal.webp-ce36fdb86ed5f02129366f416a1fa57f.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://bmqoqoj5jtlmn"]
+[gd_scene load_steps=47 format=3 uid="uid://bmqoqoj5jtlmn"]
 
 [ext_resource type="Script" path="res://Scripts/Abilities/melee_ability.gd" id="1_l4qig"]
 [ext_resource type="Texture2D" uid="uid://cslfdtkfk4wpv" path="res://Assets/MeleeAttack/frame_apngframe01.png" id="2_q4dit"]
@@ -41,6 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://bjxnw824vfwl1" path="res://Assets/MeleeAttack/frame_apngframe38.png" id="39_3j7j1"]
 [ext_resource type="Texture2D" uid="uid://b2w6vhfolb6dr" path="res://Assets/MeleeAttack/frame_apngframe39.png" id="40_g6qt4"]
 [ext_resource type="Texture2D" uid="uid://bracusxbmdyly" path="res://Assets/MeleeAttack/frame_apngframe40.png" id="41_oi84a"]
+[ext_resource type="AudioStream" uid="uid://bg2cpr344k0kt" path="res://Assets/soundeffects/scrapesharp4.wav" id="42_pr87n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_486gx"]
 size = Vector2(54, 106)
@@ -232,5 +233,8 @@ frame_progress = 0.89186
 libraries = {
 "": SubResource("AnimationLibrary_mi65k")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_pr87n")
 
 [connection signal="animation_finished" from="AttackPlayer" to="." method="_on_attack_player_animation_finished"]

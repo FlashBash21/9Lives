@@ -11,7 +11,7 @@ func initialize(_args: Dictionary) -> void:
 	$Timer.start()
 	scale = Vector2.ZERO
 	phase = 1
-
+	
 func _process(delta: float) -> void:
 	if (phase == 1):
 		scale = Vector2.ONE * (1 - $Timer.time_left / maxTime)
@@ -32,3 +32,5 @@ func _process(delta: float) -> void:
 						body.apply_damage(1)
 						print("Explosion Hit")
 						break
+
+

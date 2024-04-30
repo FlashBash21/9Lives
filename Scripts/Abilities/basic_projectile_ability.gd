@@ -36,6 +36,8 @@ func execute(args: Dictionary) -> void:
 	projectile.position = get_parent().position
 	velocity = Vector2(1, 0).rotated(projectile.rotation) * speed
 	
+	$AudioStreamPlayer.play()
+	
 	projectiles.append({
 		"projectile": projectile,
 		"velocity": velocity,

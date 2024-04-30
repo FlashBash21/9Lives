@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://brs82fmwefapw"]
+
+[ext_resource type="Script" path="res://Scripts/Abilities/music_ability.gd" id="1_dsud5"]
+[ext_resource type="AudioStream" uid="uid://dqwybamckxtwe" path="res://Assets/music/basic16ths.mp3" id="2_ifqt2"]
+[ext_resource type="AudioStream" uid="uid://xfyigoddun8k" path="res://Assets/music/bass.mp3" id="3_ow0tk"]
+[ext_resource type="AudioStream" uid="uid://c1xdah74clsc3" path="res://Assets/music/keys2.mp3" id="4_q6hym"]
+[ext_resource type="AudioStream" uid="uid://dlj6pbqp0snpc" path="res://Assets/music/melody.mp3" id="5_7ovov"]
+[ext_resource type="AudioStream" uid="uid://cj75x35j56g5n" path="res://Assets/music/vibe.mp3" id="6_lpagw"]
+
+[node name="MusicAbility" type="Node2D"]
+script = ExtResource("1_dsud5")
+
+[node name="basic16th" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ifqt2")
+volume_db = -80.0
+bus = &"basic"
+
+[node name="bass" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ow0tk")
+volume_db = -80.0
+bus = &"bass"
+
+[node name="keys" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_q6hym")
+volume_db = -80.0
+bus = &"keys"
+
+[node name="melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7ovov")
+volume_db = -80.0
+bus = &"melody"
+
+[node name="vibe" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lpagw")
+volume_db = -80.0
+bus = &"vibe"

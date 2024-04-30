@@ -25,7 +25,7 @@ var phase:int
 var phaseStep: int
 
 func _ready():
-	self.hp = 200
+	self.hp = 1
 	add_to_group("Enemy")
 	
 	health_bar = load_ability("Boss/healthBar")

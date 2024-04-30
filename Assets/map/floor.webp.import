@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u3bxdh6xje5a"
-path="res://.godot/imported/wall_vertical.webp-bb8f0ed303e4f205a562728151237388.ctex"
+uid="uid://7vlcsn1ysi4h"
+path="res://.godot/imported/floor.webp-7602a726b10a1a39543e3c31f5777d84.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/wall_vertical.webp"
-dest_files=["res://.godot/imported/wall_vertical.webp-bb8f0ed303e4f205a562728151237388.ctex"]
+source_file="res://Assets/map/floor.webp"
+dest_files=["res://.godot/imported/floor.webp-7602a726b10a1a39543e3c31f5777d84.ctex"]
 
 [params]
 

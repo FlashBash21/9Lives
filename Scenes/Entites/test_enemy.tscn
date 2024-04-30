@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctnqeooju8vil"]
+[gd_scene load_steps=4 format=3 uid="uid://ctnqeooju8vil"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/test_enemy.gd" id="1_bdbfl"]
+[ext_resource type="AudioStream" uid="uid://dnciinmhsdt44" path="res://Assets/soundeffects/playerdamagedeath3.wav" id="2_41doj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i06cs"]
 size = Vector2(28, 28)
@@ -20,3 +21,6 @@ offset_top = -15.0
 offset_right = 15.0
 offset_bottom = 15.0
 color = Color(0.989734, 0.745276, 0.421107, 1)
+
+[node name="damage" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_41doj")
